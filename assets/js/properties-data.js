@@ -91,7 +91,9 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/capricon living room.jpg", alt: "Capricorn — living room" },
       { src: "assets/img/capricon living room1.jpg", alt: "Capricorn — living room" },
       { src: "assets/img/capricon kitchen.jpg", alt: "Capricorn — kitchen" },
-      { src: "assets/img/capricon bedroom.jpg", alt: "Capricorn — bedroom" }
+      { src: "assets/img/capricon bedroom.jpg", alt: "Capricorn — bedroom" },
+      { src: "assets/img/capricorn unit layout.jpeg", alt: "Capricorn — unit layout" },
+      { src: "assets/img/capricorn layout coloured.jpeg", alt: "Capricorn — unit layout (coloured)" }
     ],
     artVariant: "towers"
   },
@@ -262,9 +264,13 @@ const AFRAVIVA_PROPERTIES = [
     ],
     gallery: [
       { src: "assets/img/kai diani.jpg", alt: "Kai Apartments — Diani" },
+      { src: "assets/img/kai aeria view.jpeg", alt: "Kai Apartments — aerial view" },
       { src: "assets/img/kai living area.jpg", alt: "Kai Apartments — living area" },
       { src: "assets/img/kai pool area.jpg", alt: "Kai Apartments — pool area" },
-      { src: "assets/img/kai pool with view to the ocean.jpg", alt: "Kai Apartments — pool with ocean view" }
+      { src: "assets/img/kai pool with view to the ocean.jpg", alt: "Kai Apartments — pool with ocean view" },
+      { src: "assets/img/kai balcon view.jpeg", alt: "Kai Apartments — balcony view" },
+      { src: "assets/img/kai balcon view 1.jpeg", alt: "Kai Apartments — balcony view" },
+      { src: "assets/img/kai interior renders.jpeg", alt: "Kai Apartments — interior render" }
     ],
     artVariant: "coast"
   },
@@ -312,6 +318,11 @@ const AFRAVIVA_PROPERTIES = [
       "Town Square \u2014 50+ retail outlets",
       "Grand reception lobby & concierge",
       "Golf cart route"
+    ],
+    gallery: [
+      { src: "assets/img/enaki.jpeg", alt: "Enaki" },
+      { src: "assets/img/enaki aerial view.jpeg", alt: "Enaki — aerial view" },
+      { src: "assets/img/enaki apartment view.jpeg", alt: "Enaki — apartment view" }
     ],
     artVariant: "towers"
   },
