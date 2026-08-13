@@ -1,0 +1,31 @@
+AfraViva Homes brand mark — inlined per page as <svg class="mark"> in nav + footer.
+
+Built from real geographic data (world-atlas countries-110m + topojson-simplify + d3-geo
+Mercator projection, fitExtent [[22,6],[96,106]] in a 100x110 viewBox), not hand-drawn —
+this is an accurate, recognizable Africa + Madagascar silhouette, generated once and then
+inlined as static path data (no runtime dependency on d3/topojson).
+
+Adapted from the AfraViva Media logo concept (Africa silhouette + sunburst), relabelled
+for Homes. Sunburst rays radiate from a fixed origin point (23.15, 39.83) — a projected
+point off the West African coast — sweeping through angles -170 to +10 degrees, with a
+ring (circle r=11) at the same origin.
+
+Light background (header nav) fills:
+  continent + Madagascar: #3E2A1B
+  rays/ring: #E2861F
+
+Dark background (footer) fills:
+  continent + Madagascar: #F1ECDC
+  rays/ring: #D9A552
+
+viewBox: 0 0 100 110
+
+To regenerate or adjust the continent path: load world-atlas's countries-110m.json,
+filter to African ISO-3166-1 numeric codes (see list below), merge via topojson.merge,
+simplify with topojson-simplify (tolerance ~1.5 for icon-weight detail), then project
+with d3.geoMercator().fitExtent(...) and d3.geoPath().
+
+African mainland ISO numeric codes used (Madagascar id 450 handled separately):
+012,024,204,072,854,108,120,140,148,178,180,384,262,818,226,232,748,231,266,270,288,324,
+624,404,426,430,434,454,466,478,504,508,516,562,566,646,686,694,706,710,728,729,834,768,
+788,800,732,894,716
