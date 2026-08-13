@@ -78,11 +78,17 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ===========================================================
    Property card renderer — used on home + listing pages
    =========================================================== */
+function afravivaCardArtHTML(p){
+  return p.coverImage
+    ? `<img src="${p.coverImage}" alt="${p.name}" loading="lazy">`
+    : afravivaArt(p.artVariant, p.status);
+}
+
 function afravivaCardHTML(p){
   if(p.status === "tbc"){
     return `
     <div class="p-card">
-      <div class="p-card-art">${afravivaArt(p.artVariant, p.status)}</div>
+      <div class="p-card-art">${afravivaCardArtHTML(p)}</div>
       <div class="tbc-card" style="border:none;padding:24px;">
         <span class="tag tag-tbc">${p.statusLabel}</span>
         <h3>${p.name}</h3>
@@ -99,7 +105,7 @@ function afravivaCardHTML(p){
   <a class="p-card" href="property.html?slug=${p.slug}">
     <div class="p-card-art">
       <span class="p-card-tag"><span class="tag ${tagClass}">${p.statusLabel}</span></span>
-      ${afravivaArt(p.artVariant, p.status)}
+      ${afravivaCardArtHTML(p)}
     </div>
     <div class="p-card-body">
       <div class="p-card-loc">${p.neighbourhood} · ${p.regionLabel}</div>

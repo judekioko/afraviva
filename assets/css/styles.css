@@ -114,7 +114,7 @@ p{ margin: 0 0 14px; color: var(--ink); }
   display: flex; align-items: center; gap: 10px;
   font-family: var(--f-serif); font-weight: 600; font-size: 20px; color: var(--forest);
 }
-.brand .mark{ width: 26px; height: 26px; flex-shrink: 0; }
+.brand .mark{ width: 26px; height: 26px; flex-shrink: 0; object-fit: contain; }
 .brand-name{ white-space: nowrap; }
 .v-flag{ color: var(--gold); }
 .nav-links{ display: flex; align-items: center; gap: 30px; }
@@ -154,7 +154,7 @@ p{ margin: 0 0 14px; color: var(--ink); }
   aspect-ratio: 4/3; overflow: hidden; background: var(--paper-alt);
   position: relative; border-radius: var(--radius);
 }
-.p-card-art svg{ width: 100%; height: 100%; display: block; }
+.p-card-art svg, .p-card-art img{ width: 100%; height: 100%; display: block; object-fit: cover; }
 
 /* ---------- montage strip ---------- */
 .montage-strip{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); margin: 8px 0 0; }
@@ -363,7 +363,7 @@ a.p-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
 /* ---------- property detail page ---------- */
 .p-hero{ background: var(--paper-alt); }
 .p-hero-art{ width: 100%; aspect-ratio: 16/6; overflow: hidden; }
-.p-hero-art svg{ width: 100%; height: 100%; display: block; }
+.p-hero-art svg, .p-hero-art img{ width: 100%; height: 100%; display: block; object-fit: cover; }
 .p-hero-info{ padding: 36px 28px 44px; }
 .p-name{ margin: 8px 0 10px; }
 .p-loc{ font-family: var(--f-mono); font-size: 13px; color: var(--muted); margin-bottom: 16px; }

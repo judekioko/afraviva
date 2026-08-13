@@ -55,6 +55,7 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/marquis playground for kids.jpg", caption: "Children's playground" },
       { src: "assets/img/marquis playground for kids1.jpg", caption: "Children's playground — swings" }
     ],
+    coverImage: "assets/img/marquis general view.jpg",
     artVariant: "towers"
   },
   {
@@ -95,6 +96,7 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/capricorn unit layout.jpeg", caption: "Unit floor plan" },
       { src: "assets/img/capricorn layout coloured.jpeg", caption: "Unit floor plan — styled" }
     ],
+    coverImage: "assets/img/capricon aerialview.jpg",
     artVariant: "towers"
   },
   {
@@ -131,6 +133,7 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/1870 under construction1.jpg", caption: "Under construction \u2014 tower rising" },
       { src: "assets/img/1870 under construction2.jpg", caption: "Under construction \u2014 street view" }
     ],
+    coverImage: "assets/img/1870 under construction1.jpg",
     artVariant: "towers"
   },
   {
@@ -199,6 +202,7 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/gemini rooftop play pouch.jpg", caption: "Rooftop paddle court" },
       { src: "assets/img/gemini under construction.jpg", caption: "Under construction" }
     ],
+    coverImage: "assets/img/gemini phase 2.jpg",
     artVariant: "towers"
   },
   {
@@ -272,6 +276,7 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/kai balcon view 1.jpeg", caption: "Balcony — ocean view" },
       { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" }
     ],
+    coverImage: "assets/img/kai aeria view.jpeg",
     artVariant: "coast"
   },
   {
@@ -324,6 +329,7 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/enaki aerial view.jpeg", caption: "Aerial view" },
       { src: "assets/img/enaki apartment view.jpeg", caption: "Exterior — entrance" }
     ],
+    coverImage: "assets/img/enaki apartment view.jpeg",
     artVariant: "towers"
   },
   {
