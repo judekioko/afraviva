@@ -40,20 +40,20 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Parking", value: "2 parking spots plus a storage room" }
     ],
     gallery: [
-      { src: "assets/img/marquis.jpg", alt: "The Marquis — exterior" },
-      { src: "assets/img/marquis 1.jpg", alt: "The Marquis — exterior view" },
-      { src: "assets/img/marquis general view.jpg", alt: "The Marquis — general view" },
-      { src: "assets/img/marquis living room.jpg", alt: "The Marquis — living room" },
-      { src: "assets/img/marquis kitchen.jpg", alt: "The Marquis — kitchen" },
-      { src: "assets/img/marquis bathroom.jpg", alt: "The Marquis — bathroom" },
-      { src: "assets/img/marquis in.jpg", alt: "The Marquis — interior" },
-      { src: "assets/img/marquis in 1.jpg", alt: "The Marquis — interior" },
-      { src: "assets/img/marquis in 2.jpg", alt: "The Marquis — interior" },
-      { src: "assets/img/marquis in 3.jpg", alt: "The Marquis — interior" },
-      { src: "assets/img/marquis gym.jpg", alt: "The Marquis — gym" },
-      { src: "assets/img/marquis pool.jpg", alt: "The Marquis — pool" },
-      { src: "assets/img/marquis playground for kids.jpg", alt: "The Marquis — children's playground" },
-      { src: "assets/img/marquis playground for kids1.jpg", alt: "The Marquis — children's playground" }
+      { src: "assets/img/marquis.jpg", caption: "Exterior & pool" },
+      { src: "assets/img/marquis 1.jpg", caption: "Children's playground — rooftop" },
+      { src: "assets/img/marquis general view.jpg", caption: "Exterior — twin towers" },
+      { src: "assets/img/marquis living room.jpg", caption: "Living room" },
+      { src: "assets/img/marquis kitchen.jpg", caption: "Kitchen" },
+      { src: "assets/img/marquis bathroom.jpg", caption: "Bathroom" },
+      { src: "assets/img/marquis in.jpg", caption: "Living room" },
+      { src: "assets/img/marquis in 1.jpg", caption: "Bedroom" },
+      { src: "assets/img/marquis in 2.jpg", caption: "Living room — TV area" },
+      { src: "assets/img/marquis in 3.jpg", caption: "Living & dining area" },
+      { src: "assets/img/marquis gym.jpg", caption: "Gym" },
+      { src: "assets/img/marquis pool.jpg", caption: "Pool" },
+      { src: "assets/img/marquis playground for kids.jpg", caption: "Children's playground" },
+      { src: "assets/img/marquis playground for kids1.jpg", caption: "Children's playground — swings" }
     ],
     artVariant: "towers"
   },
@@ -87,13 +87,13 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Parking", value: "1 car park" }
     ],
     gallery: [
-      { src: "assets/img/capricon aerialview.jpg", alt: "Capricorn — aerial view" },
-      { src: "assets/img/capricon living room.jpg", alt: "Capricorn — living room" },
-      { src: "assets/img/capricon living room1.jpg", alt: "Capricorn — living room" },
-      { src: "assets/img/capricon kitchen.jpg", alt: "Capricorn — kitchen" },
-      { src: "assets/img/capricon bedroom.jpg", alt: "Capricorn — bedroom" },
-      { src: "assets/img/capricorn unit layout.jpeg", alt: "Capricorn — unit layout" },
-      { src: "assets/img/capricorn layout coloured.jpeg", alt: "Capricorn — unit layout (coloured)" }
+      { src: "assets/img/capricon aerialview.jpg", caption: "Aerial view" },
+      { src: "assets/img/capricon living room.jpg", caption: "Living room" },
+      { src: "assets/img/capricon living room1.jpg", caption: "Living & dining area" },
+      { src: "assets/img/capricon kitchen.jpg", caption: "Kitchen" },
+      { src: "assets/img/capricon bedroom.jpg", caption: "Bedroom" },
+      { src: "assets/img/capricorn unit layout.jpeg", caption: "Unit floor plan" },
+      { src: "assets/img/capricorn layout coloured.jpeg", caption: "Unit floor plan — styled" }
     ],
     artVariant: "towers"
   },
@@ -127,9 +127,9 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Project team", value: "Architect: Bowman Associates \u00B7 Main contractor: Zhejiang Chengjian Construction Africa (ZJCC) \u00B7 Project managers: LMJ Consultancy \u00B7 Development manager & selling agent: HassConsult" }
     ],
     gallery: [
-      { src: "assets/img/1870 under construction.jpg", alt: "1870 West \u2014 under construction" },
-      { src: "assets/img/1870 under construction1.jpg", alt: "1870 West \u2014 under construction" },
-      { src: "assets/img/1870 under construction2.jpg", alt: "1870 West \u2014 under construction" }
+      { src: "assets/img/1870 under construction.jpg", caption: "Under construction \u2014 early stage" },
+      { src: "assets/img/1870 under construction1.jpg", caption: "Under construction \u2014 tower rising" },
+      { src: "assets/img/1870 under construction2.jpg", caption: "Under construction \u2014 street view" }
     ],
     artVariant: "towers"
   },
@@ -188,16 +188,16 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Payment plan", value: "30% deposit \u00B7 50% during construction \u00B7 20% on completion" }
     ],
     gallery: [
-      { src: "assets/img/gemini phase 2.jpg", alt: "Gemini \u2014 phase 2" },
-      { src: "assets/img/gemini living room.jpg", alt: "Gemini \u2014 living room" },
-      { src: "assets/img/gemini living room1.jpg", alt: "Gemini \u2014 living room" },
-      { src: "assets/img/gemini kitchen.jpg", alt: "Gemini \u2014 kitchen" },
-      { src: "assets/img/gemini bedroom.jpg", alt: "Gemini \u2014 bedroom" },
-      { src: "assets/img/gemini balcony relaxing area.jpg", alt: "Gemini \u2014 balcony relaxing area" },
-      { src: "assets/img/gemini artcafte.jpg", alt: "Gemini \u2014 art caf\u00E9" },
-      { src: "assets/img/gemini gym.jpg", alt: "Gemini \u2014 gym" },
-      { src: "assets/img/gemini rooftop play pouch.jpg", alt: "Gemini \u2014 rooftop play area" },
-      { src: "assets/img/gemini under construction.jpg", alt: "Gemini \u2014 under construction" }
+      { src: "assets/img/gemini phase 2.jpg", caption: "Exterior render \u2014 night" },
+      { src: "assets/img/gemini living room.jpg", caption: "Living room" },
+      { src: "assets/img/gemini living room1.jpg", caption: "Living room \u2014 pool view" },
+      { src: "assets/img/gemini kitchen.jpg", caption: "Kitchen" },
+      { src: "assets/img/gemini bedroom.jpg", caption: "Bedroom" },
+      { src: "assets/img/gemini balcony relaxing area.jpg", caption: "Balcony" },
+      { src: "assets/img/gemini artcafte.jpg", caption: "Artcaff\u00E9" },
+      { src: "assets/img/gemini gym.jpg", caption: "Gym" },
+      { src: "assets/img/gemini rooftop play pouch.jpg", caption: "Rooftop paddle court" },
+      { src: "assets/img/gemini under construction.jpg", caption: "Under construction" }
     ],
     artVariant: "towers"
   },
@@ -263,14 +263,14 @@ const AFRAVIVA_PROPERTIES = [
       "Grade A seaside finishes"
     ],
     gallery: [
-      { src: "assets/img/kai diani.jpg", alt: "Kai Apartments — Diani" },
-      { src: "assets/img/kai aeria view.jpeg", alt: "Kai Apartments — aerial view" },
-      { src: "assets/img/kai living area.jpg", alt: "Kai Apartments — living area" },
-      { src: "assets/img/kai pool area.jpg", alt: "Kai Apartments — pool area" },
-      { src: "assets/img/kai pool with view to the ocean.jpg", alt: "Kai Apartments — pool with ocean view" },
-      { src: "assets/img/kai balcon view.jpeg", alt: "Kai Apartments — balcony view" },
-      { src: "assets/img/kai balcon view 1.jpeg", alt: "Kai Apartments — balcony view" },
-      { src: "assets/img/kai interior renders.jpeg", alt: "Kai Apartments — interior render" }
+      { src: "assets/img/kai diani.jpg", caption: "Diani — seaside setting" },
+      { src: "assets/img/kai aeria view.jpeg", caption: "Aerial view" },
+      { src: "assets/img/kai living area.jpg", caption: "Living area" },
+      { src: "assets/img/kai pool area.jpg", caption: "Pool area — evening" },
+      { src: "assets/img/kai pool with view to the ocean.jpg", caption: "Rooftop pool — ocean view" },
+      { src: "assets/img/kai balcon view.jpeg", caption: "Balcony with private bath" },
+      { src: "assets/img/kai balcon view 1.jpeg", caption: "Balcony — ocean view" },
+      { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" }
     ],
     artVariant: "coast"
   },
@@ -320,9 +320,9 @@ const AFRAVIVA_PROPERTIES = [
       "Golf cart route"
     ],
     gallery: [
-      { src: "assets/img/enaki.jpeg", alt: "Enaki" },
-      { src: "assets/img/enaki aerial view.jpeg", alt: "Enaki — aerial view" },
-      { src: "assets/img/enaki apartment view.jpeg", alt: "Enaki — apartment view" }
+      { src: "assets/img/enaki.jpeg", caption: "Landscaped garden walk" },
+      { src: "assets/img/enaki aerial view.jpeg", caption: "Aerial view" },
+      { src: "assets/img/enaki apartment view.jpeg", caption: "Exterior — entrance" }
     ],
     artVariant: "towers"
   },

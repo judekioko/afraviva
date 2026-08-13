@@ -250,7 +250,8 @@
         <div class="photo-grid">
           ${p.gallery.map(g => `
             <div class="photo-item">
-              <img src="${g.src}" alt="${g.alt}" loading="lazy">
+              <img src="${g.src}" alt="${p.name} — ${g.caption}" loading="lazy">
+              <span class="photo-caption">${g.caption}</span>
             </div>`).join("")}
         </div>
       </div>
