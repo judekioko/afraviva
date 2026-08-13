@@ -39,6 +39,22 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Unit type", value: "3 bedroom, fully furnished, 2 baths, SQ, 2 balconies" },
       { label: "Parking", value: "2 parking spots plus a storage room" }
     ],
+    gallery: [
+      { src: "assets/img/marquis.jpg", alt: "The Marquis — exterior" },
+      { src: "assets/img/marquis 1.jpg", alt: "The Marquis — exterior view" },
+      { src: "assets/img/marquis general view.jpg", alt: "The Marquis — general view" },
+      { src: "assets/img/marquis living room.jpg", alt: "The Marquis — living room" },
+      { src: "assets/img/marquis kitchen.jpg", alt: "The Marquis — kitchen" },
+      { src: "assets/img/marquis bathroom.jpg", alt: "The Marquis — bathroom" },
+      { src: "assets/img/marquis in.jpg", alt: "The Marquis — interior" },
+      { src: "assets/img/marquis in 1.jpg", alt: "The Marquis — interior" },
+      { src: "assets/img/marquis in 2.jpg", alt: "The Marquis — interior" },
+      { src: "assets/img/marquis in 3.jpg", alt: "The Marquis — interior" },
+      { src: "assets/img/marquis gym.jpg", alt: "The Marquis — gym" },
+      { src: "assets/img/marquis pool.jpg", alt: "The Marquis — pool" },
+      { src: "assets/img/marquis playground for kids.jpg", alt: "The Marquis — children's playground" },
+      { src: "assets/img/marquis playground for kids1.jpg", alt: "The Marquis — children's playground" }
+    ],
     artVariant: "towers"
   },
   {
@@ -70,6 +86,13 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Unit type", value: "2 bed, furnished, 2 bath, top floor view towards CBD" },
       { label: "Parking", value: "1 car park" }
     ],
+    gallery: [
+      { src: "assets/img/capricon aerialview.jpg", alt: "Capricorn — aerial view" },
+      { src: "assets/img/capricon living room.jpg", alt: "Capricorn — living room" },
+      { src: "assets/img/capricon living room1.jpg", alt: "Capricorn — living room" },
+      { src: "assets/img/capricon kitchen.jpg", alt: "Capricorn — kitchen" },
+      { src: "assets/img/capricon bedroom.jpg", alt: "Capricorn — bedroom" }
+    ],
     artVariant: "towers"
   },
   {
@@ -100,6 +123,11 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Parking", value: "1 car park" },
       { label: "Construction stage (Sep 2025 report)", value: "32-storey structure & roof cast \u2014 tiling, ceilings, doors, lifts and MEP fit-out ongoing" },
       { label: "Project team", value: "Architect: Bowman Associates \u00B7 Main contractor: Zhejiang Chengjian Construction Africa (ZJCC) \u00B7 Project managers: LMJ Consultancy \u00B7 Development manager & selling agent: HassConsult" }
+    ],
+    gallery: [
+      { src: "assets/img/1870 under construction.jpg", alt: "1870 West \u2014 under construction" },
+      { src: "assets/img/1870 under construction1.jpg", alt: "1870 West \u2014 under construction" },
+      { src: "assets/img/1870 under construction2.jpg", alt: "1870 West \u2014 under construction" }
     ],
     artVariant: "towers"
   },
@@ -156,6 +184,18 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Price growth (3 yrs)", value: "27%" },
       { label: "Airbnb occupancy", value: "72%" },
       { label: "Payment plan", value: "30% deposit \u00B7 50% during construction \u00B7 20% on completion" }
+    ],
+    gallery: [
+      { src: "assets/img/gemini phase 2.jpg", alt: "Gemini \u2014 phase 2" },
+      { src: "assets/img/gemini living room.jpg", alt: "Gemini \u2014 living room" },
+      { src: "assets/img/gemini living room1.jpg", alt: "Gemini \u2014 living room" },
+      { src: "assets/img/gemini kitchen.jpg", alt: "Gemini \u2014 kitchen" },
+      { src: "assets/img/gemini bedroom.jpg", alt: "Gemini \u2014 bedroom" },
+      { src: "assets/img/gemini balcony relaxing area.jpg", alt: "Gemini \u2014 balcony relaxing area" },
+      { src: "assets/img/gemini artcafte.jpg", alt: "Gemini \u2014 art caf\u00E9" },
+      { src: "assets/img/gemini gym.jpg", alt: "Gemini \u2014 gym" },
+      { src: "assets/img/gemini rooftop play pouch.jpg", alt: "Gemini \u2014 rooftop play area" },
+      { src: "assets/img/gemini under construction.jpg", alt: "Gemini \u2014 under construction" }
     ],
     artVariant: "towers"
   },
@@ -219,6 +259,12 @@ const AFRAVIVA_PROPERTIES = [
       "Oceanview retreat cabanas",
       "Private gardens (ground floor residences)",
       "Grade A seaside finishes"
+    ],
+    gallery: [
+      { src: "assets/img/kai diani.jpg", alt: "Kai Apartments — Diani" },
+      { src: "assets/img/kai living area.jpg", alt: "Kai Apartments — living area" },
+      { src: "assets/img/kai pool area.jpg", alt: "Kai Apartments — pool area" },
+      { src: "assets/img/kai pool with view to the ocean.jpg", alt: "Kai Apartments — pool with ocean view" }
     ],
     artVariant: "coast"
   },
