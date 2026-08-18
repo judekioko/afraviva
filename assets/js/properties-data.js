@@ -30,7 +30,7 @@ const AFRAVIVA_PROPERTIES = [
     longDescription: "Kileleshwa and neighbouring Lavington Green have spent a decade becoming Nairobi's most reliable mid-rise address for professionals who want space without a long commute. The Marquis adds to that with finished, fully furnished and serviced units — what you view is what you move into, not a rendering of what might be. Suited to stays from a few nights to a long-term lease.",
     facts: [
       { label: "Status", value: "Ready now" },
-      { label: "Unit size", value: "153 sqm gross area" },
+      { label: "Unit size", value: "153 square metres gross area" },
       { label: "Developer", value: "Hayer One" },
       { label: "Neighbourhood", value: "Kileleshwa / Lavington Green" }
     ],
@@ -64,7 +64,7 @@ const AFRAVIVA_PROPERTIES = [
     developer: "Staroot",
     region: "nairobi",
     regionLabel: "Nairobi",
-    neighbourhood: "Kilimani, across from Yaya Centre",
+    neighbourhood: "Kilimani, across from Yaya Mall",
     lat: -1.2932,
     lng: 36.7869,
     status: "progress",
@@ -73,17 +73,17 @@ const AFRAVIVA_PROPERTIES = [
     ledgerPos: 12,
     ledgerRow: "above",
     beds: "2 bed",
-    description: "Staroot's Capricorn is rising in Kilimani, a short walk from Yaya Centre and the neighbourhood's café strip. Reservations are open ahead of a targeted Q4 2026 handover.",
+    description: "Staroot's Capricorn is rising in Kilimani, a short walk from Yaya Mall and the neighbourhood's café strip. Reservations are open ahead of a targeted Q4 2026 handover.",
     longDescription: "Kilimani remains Nairobi's most in-demand serviced-apartment zone for young professionals and short-stay guests alike, and Capricorn is positioned to serve that demand directly — walkable to shopping, restaurants, and coworking spaces, with a construction timeline that puts occupancy in the final quarter of 2026.",
     facts: [
       { label: "Status", value: "Under construction" },
-      { label: "Target", value: "Q4 2026 (estimated)" },
+      { label: "Target", value: "2026 Q4" },
       { label: "Unit size", value: "103 sqm gross area" },
       { label: "Developer", value: "Staroot" },
-      { label: "Neighbourhood", value: "Kilimani, across from Yaya Centre" }
+      { label: "Neighbourhood", value: "Kilimani, across from Yaya Mall" }
     ],
     specs: [
-      { label: "Target occupancy", value: "Q4 2026 — estimated" },
+      { label: "Target occupancy", value: "2026 Q4" },
       { label: "Unit type", value: "2 bed, furnished, 2 bath, top floor view towards CBD" },
       { label: "Parking", value: "1 car park" }
     ],
@@ -102,7 +102,7 @@ const AFRAVIVA_PROPERTIES = [
   {
     slug: "1870-west",
     name: "1870 West",
-    developer: "1870 West Limited",
+    developer: "HassConsult",
     region: "nairobi",
     regionLabel: "Nairobi",
     neighbourhood: "Westlands, between Westgate and Sarit malls",
@@ -117,9 +117,10 @@ const AFRAVIVA_PROPERTIES = [
     description: "\u201CAtmospheric residences at the crown jewel of Westlands.\u201D 1870 West's full 32-storey structure is complete, rising above Lower Kabete Road near the Westgate roundabout, with interior fit-out now underway across the tower.",
     longDescription: "Westlands has consolidated as Nairobi's second business district, and 1870 West is built around that shift — a serviced address for people who work in or near Westlands and want to cut the commute down to a walk, whether they're staying a week or a year. As of the September 2025 site progress report, all 32 floors (including both amenity floors and the roof) have been cast and the structure stands complete; block walling, plastering and screed works are finished, while tiling, ceilings, doors, lifts and MEP fit-out continue floor by floor.",
     facts: [
-      { label: "Status", value: "Under construction \u2014 structure complete" },
+      { label: "Status", value: "Under construction" },
+      { label: "Target", value: "2027 Q1" },
       { label: "Unit size", value: "92 sqm gross area" },
-      { label: "Developer", value: "1870 West Limited" },
+      { label: "Developer", value: "HassConsult" },
       { label: "Neighbourhood", value: "Westlands, between Westgate and Sarit malls" }
     ],
     specs: [
@@ -139,10 +140,10 @@ const AFRAVIVA_PROPERTIES = [
   {
     slug: "gemini",
     name: "Gemini",
-    developer: "Staroot Real Estate",
+    developer: "Staroot",
     region: "nairobi",
     regionLabel: "Nairobi",
-    neighbourhood: "Matundu Lane, Brookside, Westlands — near Sarit Centre",
+    neighbourhood: "Brookside, Westlands, near Waiyaki Way",
     lat: -1.2592,
     lng: 36.7920,
     status: "progress",
@@ -150,19 +151,19 @@ const AFRAVIVA_PROPERTIES = [
     quarterLabel: "Est. 2027",
     ledgerPos: 31,
     ledgerRow: "above",
-    beds: "1 & 2 bed",
-    description: "\u201CWhere the stars live.\u201D Gemini rises on Matundu Lane in Westlands' Brookside pocket, a minute from Sarit Centre, from the team behind Capricorn — with Kenya's first rooftop paddle court, a heated infinity pool, and a skyline view over the city.",
-    longDescription: "Gemini pairs a quiet Brookside address with resort-grade amenities rarely found outside a hotel: a courtyard pool and garden at ground level, a co-work space and private cinema for downtime, and a rooftop that turns into Kenya's first sky-high paddle court and heated infinity pool. Built by Staroot Real Estate — the team behind Capricorn in Kilimani — with Proxima Real Estate as development consultants.",
+    beds: "2 bed",
+    description: "\u201CWhere the stars live.\u201D Gemini rises in Westlands' Brookside pocket, near Waiyaki Way, from the team behind Capricorn — with Kenya's first rooftop paddle court, a heated infinity pool, and a skyline view over the city.",
+    longDescription: "Gemini pairs a quiet Brookside address with resort-grade amenities rarely found outside a hotel: a courtyard pool and garden at ground level, a co-work space and private cinema for downtime, and a rooftop that turns into Kenya's first sky-high paddle court and heated infinity pool. Built by Staroot — the team behind Capricorn in Kilimani — with Proxima Real Estate as development consultants.",
     facts: [
       { label: "Status", value: "Under construction" },
-      { label: "Unit sizes", value: "1 bed \u2013 58 sqm \u00B7 2 bed \u2013 90 sqm" },
-      { label: "Developer", value: "Staroot Real Estate" },
-      { label: "Neighbourhood", value: "Matundu Lane, Brookside, Westlands \u2014 near Sarit Centre" }
+      { label: "Unit size", value: "58 sqm gross area" },
+      { label: "Developer", value: "Staroot" },
+      { label: "Neighbourhood", value: "Brookside, Westlands, near Waiyaki Way" }
     ],
     specs: [
-      { label: "Unit on offer", value: "2 bed, 2 bath, fully furnished, top floor facing CBD" },
+      { label: "Unit type", value: "2 bed, 2 bath, fully furnished, top floor facing CBD" },
       { label: "Parking", value: "1 car park" },
-      { label: "Construction stage", value: "Structure complete \u2014 interior fit-out underway" },
+      { label: "Construction works", value: "Structure complete" },
       { label: "Development consultant", value: "Proxima Real Estate" }
     ],
     amenities: [
@@ -219,18 +220,19 @@ const AFRAVIVA_PROPERTIES = [
     quarterLabel: "Est. Q3 2027",
     ledgerPos: 37,
     ledgerRow: "below",
-    beds: "1 & 2 bed",
+    beds: "1 bed",
     description: "Kai — \u201Cthe ultimate seaside escape\u201D — sits inland of Diani's beach strip, a Grade A development already 75% sold. Meticulously crafted 1- and 2-bedroom residences across four floors, from Kshs 10.5M, with an elevated rooftop pool and sunken lounge above the treeline.",
     longDescription: "Diani continues to draw both short-stay holidaymakers and a growing base of remote workers relocating from Nairobi. Kai is built for long stays as much as short ones — a real, serviced address, not just a holiday unit, just a short stroll to the beach. Ground-floor residences come with private gardens; upper floors share a rooftop infinity pool, sunken pool lounge and oceanview retreat cabanas.",
     facts: [
       { label: "Status", value: "Under construction \u2014 75% sold" },
-      { label: "Unit size", value: "69 sqm gross area" },
+      { label: "Unit size", value: "62 sqm gross area" },
       { label: "Developer", value: "HassConsult, AYCE Investments and Studio OMT Architects" },
       { label: "Neighbourhood", value: "Diani Beach Road, near central Diani, Carrefour and the airport" }
     ],
     specs: [
-      { label: "Unit types (full range)", value: "Mini 1 Bed (373\u2013374 sq.ft) \u00B7 1 Bed (614\u2013981 sq.ft) \u00B7 1 Bed with Private Garden (630\u20131,263 sq.ft) \u00B7 2 Bed (1,029\u20131,093 sq.ft) \u00B7 2 Bed Plus (1,419 sq.ft) \u00B7 2 Bed Plus with Private Garden (2,710\u20132,804 sq.ft)" },
-      { label: "Construction stage", value: "Upper floors in progress \u2014 75% of units sold" },
+      { label: "Target occupancy", value: "2027 Q3" },
+      { label: "Unit type", value: "One bed, one bath, fully furnished" },
+      { label: "Construction stage", value: "Initial structure finished" },
       { label: "Access", value: "10 minutes from Diani Airport \u00B7 57 minutes from Mombasa International Airport via the Dongo Kundu Bypass" }
     ],
     pricing: [
@@ -282,10 +284,10 @@ const AFRAVIVA_PROPERTIES = [
   {
     slug: "enaki",
     name: "Enaki",
-    developer: "Rosslyn Suites Ltd",
+    developer: "HassConsult",
     region: "nairobi",
     regionLabel: "Nairobi",
-    neighbourhood: "Red Hill Road, Nyari \u2014 between Gigiri, Kitisuru and Village Market",
+    neighbourhood: "Village Market, near UN embassies, resort amenities",
     lat: -1.222769,
     lng: 36.786828,
     status: "progress",
@@ -298,12 +300,14 @@ const AFRAVIVA_PROPERTIES = [
     longDescription: "Enaki takes its name from Enso, the Japanese zen symbol for the circle of togetherness, and Koiyaki, a Maasai name meaning \u201Cone of a good heart.\u201D Set within the UN-approved \u201Cblue zone,\u201D the 22-acre masterplan runs from the Five Senses Botanical Garden at one end, through the Living Parkside and Living Townside residences, to the Town Square at the other \u2014 all connected by the pedestrian Enaki Walk and the Enso Bridge. Living Townside's 1- and 2-bed residences sit closest to the Town Square, with access to a fitness pool, zen pool, gym, dance studio, screening room and sports lounge.",
     facts: [
       { label: "Status", value: "Under construction" },
+      { label: "Target", value: "2028 Q4" },
       { label: "Unit size", value: "63 sqm gross area" },
-      { label: "Developer", value: "Rosslyn Suites Ltd (HassConsult \u2014 development manager & selling agent)" },
-      { label: "Neighbourhood", value: "Red Hill Road, Nyari \u2014 between Gigiri, Kitisuru and Village Market" }
+      { label: "Developer", value: "HassConsult" },
+      { label: "Neighbourhood", value: "Village Market, near UN embassies, resort amenities" }
     ],
     specs: [
-      { label: "Unit type", value: "One bed, one bath, fully furnished (Living Townside)" },
+      { label: "Target occupancy", value: "2028 Q4" },
+      { label: "Unit type", value: "One bed, one bath, fully furnished" },
       { label: "Development scale", value: "22 acres \u2014 Five Senses Botanical Garden (6.3 acres) \u00B7 residential resort (9.6 acres) \u00B7 Town Square (6.2 acres)" },
       { label: "Coordinates", value: "-1.222769, 36.786828" },
       { label: "Project team", value: "Architect: Bowman & Associates \u00B7 Project manager: Limojade Management \u00B7 Botanical garden master planner: iGreens, Spain" }
@@ -351,13 +355,13 @@ const AFRAVIVA_PROPERTIES = [
     longDescription: "Nyali is Mombasa's most established residential and short-stay address, and Sensei sits on a private beach at the south end of Nyali Beach with resort-style amenities. Sensei is being built to the same serviced standard as Afra<span class=\"v-flag\">V</span>iva's Nairobi properties, giving the coast portfolio a second anchor alongside Diani.",
     facts: [
       { label: "Status", value: "Under construction" },
-      { label: "Target", value: "Q1 2029 (estimated)" },
+      { label: "Target", value: "2029 Q1" },
       { label: "Unit size", value: "130 sqm" },
       { label: "Developer", value: "HassConsult, AYCE Investments and Studio OMT Architects" },
       { label: "Neighbourhood", value: "Nyali, Mombasa — private beach, south end of Nyali Beach, resort amenities" }
     ],
     specs: [
-      { label: "Target occupancy", value: "Q1 2029" },
+      { label: "Target occupancy", value: "2029 Q1" },
       { label: "Unit type", value: "One bed, split-level duplex with two seaside balcony views" }
     ],
     artVariant: "coast"

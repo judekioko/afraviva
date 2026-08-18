@@ -155,6 +155,11 @@ p{ margin: 0 0 14px; color: var(--ink); }
   position: relative; border-radius: var(--radius);
 }
 .p-card-art svg, .p-card-art img{ width: 100%; height: 100%; display: block; object-fit: cover; }
+.about-logo-card{
+  aspect-ratio: 4/3; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--paper); display: flex; align-items: center; justify-content: center; padding: 40px;
+}
+.about-logo-card img{ width: 100%; max-width: 360px; height: auto; display: block; }
 
 /* ---------- montage strip ---------- */
 .montage-strip{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); margin: 8px 0 0; }
