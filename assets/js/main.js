@@ -4,11 +4,29 @@
 
 const WHATSAPP_NUMBER = "254113781366";
 
+function waLink(text){
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
 function whatsappLink(propertyName){
   const msg = propertyName
     ? `Hi Afraviva Homes, I'd like to know more about renting at ${propertyName}.`
     : `Hi Afraviva Homes, I'd like to know more about renting one of your properties.`;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  return waLink(msg);
+}
+
+/* All enquiry/notify forms have no backend — submitting hands the
+   visitor's details to WhatsApp instead, since that's the one
+   channel on this static site that actually reaches the business. */
+function openWhatsAppWithForm(text){
+  window.open(waLink(text), "_blank", "noopener");
+}
+
+function flashButton(btn, text, duration){
+  if(!btn) return;
+  const original = btn.textContent;
+  btn.textContent = text;
+  setTimeout(() => { btn.textContent = original; }, duration || 2400);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -48,31 +66,53 @@ document.addEventListener("DOMContentLoaded", () => {
     el.href = whatsappLink(el.dataset.whatsapp === "general" ? null : el.dataset.whatsapp);
   });
 
-  /* ---- TBC notify-me forms: local-only demo confirmation ---- */
-  document.querySelectorAll(".tbc-card form").forEach(form => {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const btn = form.querySelector("button");
-      const original = btn.textContent;
-      btn.textContent = "Noted ✓";
-      form.querySelector("input").value = "";
-      setTimeout(() => { btn.textContent = original; }, 2400);
-    });
-  });
+});
 
-  /* ---- generic enquiry form (property + contact pages): demo confirmation ---- */
-  document.querySelectorAll(".enquiry-box form, .contact-form").forEach(form => {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const btn = form.querySelector("button[type=submit], .btn");
-      if(btn){
-        const original = btn.textContent;
-        btn.textContent = "Sent ✓";
-        setTimeout(() => { btn.textContent = original; }, 2600);
-      }
-      form.reset();
-    });
-  });
+/* ---- enquiry/notify forms: route to WhatsApp ----
+   Delegated on document (rather than bound per-form at page load) so
+   forms re-rendered later — e.g. the property grid after a filter
+   click — stay wired without needing to be rebound. */
+document.addEventListener("submit", (e) => {
+  const form = e.target;
+
+  if(form.matches(".tbc-card form")){
+    e.preventDefault();
+    const emailInput = form.querySelector("input[type=email]");
+    const propertyName = form.closest(".tbc-card")?.querySelector("h3")?.textContent?.trim();
+    openWhatsAppWithForm(
+      `Hi Afraviva Homes, please notify me at ${emailInput.value.trim()} when ${propertyName || "this property"}'s details are confirmed.`
+    );
+    flashButton(form.querySelector("button"), "Opening WhatsApp ✓");
+    emailInput.value = "";
+    return;
+  }
+
+  if(form.matches(".enquiry-box form") || form.matches(".contact-form")){
+    e.preventDefault();
+    const btn = form.querySelector("button[type=submit], .btn");
+    const propertyName = document.querySelector(".p-name")?.textContent?.trim();
+    const tbcEmail = form.querySelector("#tbc-email");
+
+    let lines;
+    if(tbcEmail){
+      lines = [`Hi Afraviva Homes, please notify me at ${tbcEmail.value.trim()} when ${propertyName || "this property"}'s details are confirmed.`];
+    } else {
+      const name = form.querySelector("#name, #c-name")?.value.trim();
+      const phone = form.querySelector("#phone, #c-phone")?.value.trim();
+      const email = form.querySelector("#c-email")?.value.trim();
+      const property = form.querySelector("#c-property")?.value.trim() || propertyName;
+      const message = form.querySelector("#message, #c-message")?.value.trim();
+
+      lines = [`Hi Afraviva Homes, I'd like to enquire.`, `Name: ${name}`, `Phone: ${phone}`];
+      if(email) lines.push(`Email: ${email}`);
+      if(property) lines.push(`Property: ${property}`);
+      if(message) lines.push(`Message: ${message}`);
+    }
+
+    openWhatsAppWithForm(lines.join("\n"));
+    flashButton(btn, "Opening WhatsApp ✓", 2600);
+    form.reset();
+  }
 });
 
 /* ===========================================================
@@ -165,20 +205,25 @@ function afravivaInitFilters(gridId){
   function paint(list){
     grid.innerHTML = list.map(afravivaCardHTML).join("");
   }
-  paint(AFRAVIVA_PROPERTIES);
 
   const buttons = document.querySelectorAll(".filter-btn");
+
+  function applyFilter(f){
+    buttons.forEach(b => b.classList.toggle("active", b.dataset.filter === f));
+    if(f === "all"){ paint(AFRAVIVA_PROPERTIES); return; }
+    if(f === "ready" || f === "progress" || f === "tbc"){
+      paint(AFRAVIVA_PROPERTIES.filter(p => p.status === f));
+      return;
+    }
+    paint(AFRAVIVA_PROPERTIES.filter(p => p.region === f));
+  }
+
   buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      buttons.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      const f = btn.dataset.filter;
-      if(f === "all"){ paint(AFRAVIVA_PROPERTIES); return; }
-      if(f === "ready" || f === "progress" || f === "tbc"){
-        paint(AFRAVIVA_PROPERTIES.filter(p => p.status === f));
-        return;
-      }
-      paint(AFRAVIVA_PROPERTIES.filter(p => p.region === f));
-    });
+    btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
   });
+
+  /* deep-link support: properties.html#nairobi / #coast pre-applies that filter */
+  const hashFilter = location.hash.slice(1);
+  const hasMatchingButton = Array.from(buttons).some(b => b.dataset.filter === hashFilter);
+  applyFilter(hasMatchingButton ? hashFilter : "all");
 }

@@ -356,6 +356,7 @@ a.p-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .stat-bar{ display: flex; gap: 40px; margin-top: 32px; flex-wrap: wrap; }
 .stat .n{ font-family: var(--f-serif); font-size: 28px; font-weight: 600; color: var(--forest); }
 .stat .l{ font-family: var(--f-mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 4px; }
+.anchor-offset{ display: block; scroll-margin-top: 100px; }
 .filter-bar{ display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
 .filter-btn{
   padding: 9px 18px; border-radius: 20px; border: 1px solid var(--line);
