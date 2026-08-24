@@ -322,16 +322,7 @@
   document.querySelectorAll("[data-whatsapp]").forEach(el => {
     el.href = whatsappLink(el.dataset.whatsapp === "general" ? null : el.dataset.whatsapp);
   });
-  document.querySelectorAll(".enquiry-box form").forEach(form => {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const btn = form.querySelector("button");
-      const original = btn.textContent;
-      btn.textContent = "Sent ✓";
-      form.reset();
-      setTimeout(() => { btn.textContent = original; }, 2600);
-    });
-  });
+  /* form submit handling (routes to WhatsApp) is wired centrally in main.js */
 
   const related = AFRAVIVA_PROPERTIES.filter(x => x.slug !== p.slug && x.region === p.region).slice(0,3);
   const fallback = related.length ? related : AFRAVIVA_PROPERTIES.filter(x => x.slug !== p.slug).slice(0,3);
