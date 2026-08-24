@@ -279,7 +279,8 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" }
     ],
     coverImage: "assets/img/kai aeria view.jpeg",
-    artVariant: "coast"
+    artVariant: "coast",
+    video: "RGH4Ai-oCfU"
   },
   {
     slug: "enaki",
