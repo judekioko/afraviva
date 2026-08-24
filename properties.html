@@ -46,13 +46,13 @@
     <div class="wrap">
       <span id="nairobi" class="anchor-offset"></span>
       <span id="coast" class="anchor-offset"></span>
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All properties</button>
-        <button class="filter-btn" data-filter="nairobi">Nairobi</button>
-        <button class="filter-btn" data-filter="coast">Coast</button>
-        <button class="filter-btn" data-filter="ready">Ready now</button>
-        <button class="filter-btn" data-filter="progress">Under construction</button>
-        <button class="filter-btn" data-filter="tbc">Coming soon</button>
+      <div class="filter-bar" role="group" aria-label="Filter properties">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All properties</button>
+        <button class="filter-btn" data-filter="nairobi" aria-pressed="false">Nairobi</button>
+        <button class="filter-btn" data-filter="coast" aria-pressed="false">Coast</button>
+        <button class="filter-btn" data-filter="ready" aria-pressed="false">Ready now</button>
+        <button class="filter-btn" data-filter="progress" aria-pressed="false">Under construction</button>
+        <button class="filter-btn" data-filter="tbc" aria-pressed="false">Coming soon</button>
       </div>
       <div class="grid-properties" id="properties-grid"></div>
     </div>

@@ -307,7 +307,11 @@ function afravivaInitFilters(gridId){
   const buttons = document.querySelectorAll(".filter-btn");
 
   function applyFilter(f){
-    buttons.forEach(b => b.classList.toggle("active", b.dataset.filter === f));
+    buttons.forEach(b => {
+      const isActive = b.dataset.filter === f;
+      b.classList.toggle("active", isActive);
+      b.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
     if(f === "all"){ paint(AFRAVIVA_PROPERTIES); return; }
     if(f === "ready" || f === "progress" || f === "tbc"){
       paint(AFRAVIVA_PROPERTIES.filter(p => p.status === f));

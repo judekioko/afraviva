@@ -191,6 +191,24 @@
       </div>
     </div>` : "";
 
+  const videoHTML = p.video ? `
+    <div class="section-tight">
+      <div class="wrap">
+        <span class="eyebrow">Watch</span>
+        <h2 style="margin-bottom:28px;">See ${p.name}.</h2>
+        <div class="video-embed-card">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/${p.video}"
+            title="${p.name} — video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>` : "";
+
   const locationHTML = (p.lat && p.lng) ? `
     <div class="section-tight">
       <div class="wrap">
@@ -206,6 +224,7 @@
             src="https://maps.google.com/maps?q=${p.lat},${p.lng}(${encodeURIComponent(p.name)})&z=15&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing the location of ${p.name}"
             aria-label="Map showing the location of ${p.name}">
           </iframe>
         </div>
@@ -252,6 +271,7 @@
     </div>
 
     ${galleryHTML}
+    ${videoHTML}
     ${amenitiesHTML}
     ${pricingHTML}
     ${investmentHTML}
