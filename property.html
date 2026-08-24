@@ -4,7 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="doc-title">Property — Afraviva Homes</title>
-<meta name="description" content="Property details from Afraviva Homes.">
+<meta id="doc-description" name="description" content="Property details from Afraviva Homes.">
+<link id="doc-canonical" rel="canonical" href="https://judekioko.github.io/afraviva/property.html">
+<meta id="og-type" property="og:type" content="website">
+<meta property="og:site_name" content="Afraviva Homes">
+<meta id="og-title" property="og:title" content="Property — Afraviva Homes">
+<meta id="og-description" property="og:description" content="Property details from Afraviva Homes.">
+<meta id="og-url" property="og:url" content="https://judekioko.github.io/afraviva/property.html">
+<meta id="og-image" property="og:image" content="https://judekioko.github.io/afraviva/assets/img/afraviva-logo-full.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta id="twitter-title" name="twitter:title" content="Property — Afraviva Homes">
+<meta id="twitter-description" name="twitter:description" content="Property details from Afraviva Homes.">
+<meta id="twitter-image" name="twitter:image" content="https://judekioko.github.io/afraviva/assets/img/afraviva-logo-full.png">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -126,7 +137,25 @@
     return;
   }
 
-  document.getElementById("doc-title").textContent = p.name + " — Afraviva Homes";
+  const BASE_URL = "https://judekioko.github.io/afraviva/";
+  const pageTitle = p.name + " — Afraviva Homes";
+  const plainDescription = (() => {
+    const tmp = document.createElement("div");
+    tmp.innerHTML = p.description;
+    const text = tmp.textContent.trim();
+    return text.length > 157 ? text.slice(0, 157).trim() + "…" : text;
+  })();
+  const pageUrl = BASE_URL + "property.html?slug=" + p.slug;
+  const pageImage = BASE_URL + (p.coverImage || "assets/img/afraviva-logo-full.png");
+
+  document.getElementById("doc-title").textContent = pageTitle;
+  document.getElementById("doc-description").setAttribute("content", plainDescription);
+  document.getElementById("doc-canonical").setAttribute("href", pageUrl);
+  ["og-title", "twitter-title"].forEach(id => document.getElementById(id).setAttribute("content", pageTitle));
+  ["og-description", "twitter-description"].forEach(id => document.getElementById(id).setAttribute("content", plainDescription));
+  ["og-image", "twitter-image"].forEach(id => document.getElementById(id).setAttribute("content", pageImage));
+  document.getElementById("og-url").setAttribute("content", pageUrl);
+  document.getElementById("og-type").setAttribute("content", "product");
 
   const tagClass = p.status === "ready" ? "tag-ready" : (p.status === "progress" ? "tag-progress" : "tag-tbc");
 
