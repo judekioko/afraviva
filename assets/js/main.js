@@ -159,6 +159,29 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach(el => el.classList.add("in"));
   }
 
+  /* ---- hero background video (homepage only): pause control + reduced-motion ---- */
+  const heroVideo = document.querySelector(".hero-video-bg");
+  const heroToggle = document.querySelector(".hero-video-toggle");
+  if(heroVideo){
+    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reducedMotion){
+      heroVideo.pause();
+      heroVideo.removeAttribute("autoplay");
+    }
+    if(heroToggle){
+      const iconPause = heroToggle.querySelector(".icon-pause");
+      const iconPlay = heroToggle.querySelector(".icon-play");
+      heroToggle.addEventListener("click", () => {
+        const nowPlaying = heroVideo.paused;
+        if(nowPlaying){ heroVideo.play().catch(() => {}); } else { heroVideo.pause(); }
+        heroToggle.setAttribute("aria-pressed", nowPlaying ? "true" : "false");
+        heroToggle.setAttribute("aria-label", nowPlaying ? "Pause background video" : "Play background video");
+        iconPause.style.display = nowPlaying ? "" : "none";
+        iconPlay.style.display = nowPlaying ? "none" : "";
+      });
+    }
+  }
+
   /* ---- wire up any WhatsApp buttons ---- */
   document.querySelectorAll("[data-whatsapp]").forEach(el => {
     el.href = whatsappLink(el.dataset.whatsapp === "general" ? null : el.dataset.whatsapp);
