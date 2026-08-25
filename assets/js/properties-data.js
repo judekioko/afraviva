@@ -97,7 +97,8 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/capricorn layout coloured.jpeg", caption: "Unit floor plan — styled" }
     ],
     coverImage: "assets/img/capricon aerialview.jpg",
-    artVariant: "towers"
+    artVariant: "towers",
+    videoFile: "assets/video/capricorn-walkthrough.mp4"
   },
   {
     slug: "1870-west",
