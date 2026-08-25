@@ -29,41 +29,56 @@
 <main>
 
   <!-- HERO -->
-  <section class="hero hero-video">
-    <video class="hero-video-bg" autoplay muted loop playsinline preload="metadata" poster="assets/img/capricon aerialview.jpg">
-      <source src="assets/video/capricorn-walkthrough.mp4" type="video/mp4">
-    </video>
-    <div class="hero-scrim"></div>
-    <button class="hero-video-toggle" type="button" aria-pressed="true" aria-label="Pause background video">
-      <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-      <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="display:none;"><path d="M8 5v14l11-7z"/></svg>
-    </button>
-    <div class="wrap hero-content">
-      <span class="eyebrow">Luxury serviced apartments · Nairobi &amp; the coast</span>
-      <h1>The best of the best <em>in Kenyan living.</em></h1>
-      <p class="lede">Afra<span class="v-flag">V</span>iva Homes brings you a portfolio of artfully designed, fully furnished and serviced apartments — 1, 2 and 3 bedroom — located in Nairobi and the Kenyan Coast, for stays from a single night to a long-term lease. Some are ready to move into. Others are still rising. Every one is shown at its real stage.</p>
-      <div class="hero-cta">
-        <a href="properties.html" class="btn btn-primary">View all properties</a>
-        <a href="#ledger" class="btn btn-ghost-light">See the readiness timeline</a>
+  <section class="hero hero-split">
+    <div class="hero-half-video">
+      <video class="hero-video-bg" autoplay muted loop playsinline preload="metadata" poster="assets/img/capricon aerialview.jpg">
+        <source src="assets/video/capricorn-walkthrough.mp4" type="video/mp4">
+      </video>
+      <div class="hero-scrim"></div>
+      <button class="hero-video-toggle" type="button" aria-pressed="true" aria-label="Pause background video">
+        <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="display:none;"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="wrap hero-content">
+        <span class="eyebrow">Luxury serviced apartments · Nairobi &amp; the coast</span>
+        <h1>The best of the best <em>in Kenyan living.</em></h1>
+        <p class="lede">Afra<span class="v-flag">V</span>iva Homes brings you a portfolio of artfully designed, fully furnished and serviced apartments — 1, 2 and 3 bedroom — located in Nairobi and the Kenyan Coast, for stays from a single night to a long-term lease. Some are ready to move into. Others are still rising. Every one is shown at its real stage.</p>
+        <div class="hero-cta">
+          <a href="properties.html" class="btn btn-primary">View all properties</a>
+          <a href="#ledger" class="btn btn-ghost-light">See the readiness timeline</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <div class="stat-num">8</div>
+            <div class="stat-label">Developments</div>
+          </div>
+          <div>
+            <div class="stat-num">1</div>
+            <div class="stat-label">Ready now</div>
+          </div>
+          <div>
+            <div class="stat-num">2</div>
+            <div class="stat-label">Coast</div>
+          </div>
+          <div>
+            <div class="stat-num">5</div>
+            <div class="stat-label">Nairobi</div>
+          </div>
+        </div>
       </div>
-      <div class="hero-meta">
-        <div>
-          <div class="stat-num">8</div>
-          <div class="stat-label">Developments</div>
-        </div>
-        <div>
-          <div class="stat-num">1</div>
-          <div class="stat-label">Ready now</div>
-        </div>
-        <div>
-          <div class="stat-num">2</div>
-          <div class="stat-label">Coast</div>
-        </div>
-        <div>
-          <div class="stat-num">5</div>
-          <div class="stat-label">Nairobi</div>
-        </div>
+    </div>
+    <div class="hero-half-embed">
+      <div class="hero-embed-frame">
+        <iframe
+          src="https://www.youtube.com/embed/RGH4Ai-oCfU"
+          title="Kai Residency — video"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
       </div>
+      <span class="hero-embed-caption">Kai Residency · Diani</span>
     </div>
   </section>
 
