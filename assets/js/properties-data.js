@@ -13,7 +13,7 @@
 const AFRAVIVA_PROPERTIES = [
   {
     slug: "the-marquis",
-    name: "The Marquis",
+    name: "Marquis Residency",
     developer: "Hayer One",
     region: "nairobi",
     regionLabel: "Nairobi",
@@ -26,8 +26,8 @@ const AFRAVIVA_PROPERTIES = [
     ledgerPos: 4,
     ledgerRow: "below",
     beds: "3 bedroom",
-    description: "The first Afra<span class=\"v-flag\">V</span>iva address ready to walk into. The Marquis sits on a quiet Kileleshwa side street, close enough to Nairobi's business districts for an easy commute, far enough for the street to stay calm after 6pm.",
-    longDescription: "Kileleshwa and neighbouring Lavington Green have spent a decade becoming Nairobi's most reliable mid-rise address for professionals who want space without a long commute. The Marquis adds to that with finished, fully furnished and serviced units — what you view is what you move into, not a rendering of what might be. Suited to stays from a few nights to a long-term lease.",
+    description: "The first Afra<span class=\"v-flag\">V</span>iva address ready to walk into. Marquis Residency sits on a quiet Kileleshwa side street, close enough to Nairobi's business districts for an easy commute, far enough for the street to stay calm after 6pm.",
+    longDescription: "Kileleshwa and neighbouring Lavington Green have spent a decade becoming Nairobi's most reliable mid-rise address for professionals who want space without a long commute. Marquis Residency adds to that with finished, fully furnished and serviced units — what you view is what you move into, not a rendering of what might be. Suited to stays from a few nights to a long-term lease.",
     facts: [
       { label: "Status", value: "Ready now" },
       { label: "Unit size", value: "153 sqm gross area" },
@@ -209,7 +209,7 @@ const AFRAVIVA_PROPERTIES = [
   },
   {
     slug: "kai-apartments",
-    name: "Kai Apartments",
+    name: "Kai Residency",
     developer: "HassConsult, AYCE Investments and Studio OMT Architects",
     region: "coast",
     regionLabel: "Coast",
