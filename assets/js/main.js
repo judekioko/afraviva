@@ -94,9 +94,9 @@ const SITE_FOOTER_HTML = `<footer class="site-footer">
       <div class="footer-col">
         <h4>Properties</h4>
         <ul>
-          <li><a href="property.html?slug=the-marquis">The Marquis</a></li>
+          <li><a href="property.html?slug=the-marquis">Marquis Residency</a></li>
           <li><a href="property.html?slug=capricorn">Capricorn</a></li>
-          <li><a href="property.html?slug=kai-apartments">Kai Apartments</a></li>
+          <li><a href="property.html?slug=kai-apartments">Kai Residency</a></li>
           <li><a href="property.html?slug=1870-west">1870 West</a></li>
           <li><a href="property.html?slug=gemini">Gemini</a></li>
           <li><a href="property.html?slug=enaki">Enaki</a></li>
