@@ -343,6 +343,7 @@ a.p-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
 }
 .video-embed-card iframe{ width: 100%; height: 100%; border: 0; display: block; }
 .video-embed-card video{ width: 100%; height: 100%; display: block; object-fit: contain; }
+.video-embed-card-portrait{ aspect-ratio: 9/16; max-width: 360px; }
 
 .region-map-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .region-map-title{ font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold-text); margin-bottom: 12px; font-weight: 500; }

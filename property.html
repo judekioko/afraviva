@@ -196,7 +196,7 @@
       <div class="wrap">
         <span class="eyebrow">Watch</span>
         <h2 style="margin-bottom:28px;">See ${p.name}.</h2>
-        <div class="video-embed-card">
+        <div class="video-embed-card${p.videoPortrait ? " video-embed-card-portrait" : ""}">
           ${p.video ? `
           <iframe
             src="https://www.youtube.com/embed/${p.video}"

@@ -136,7 +136,9 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/1870 under construction2.jpg", caption: "Under construction \u2014 street view" }
     ],
     coverImage: "assets/img/1870 under construction1.jpg",
-    artVariant: "towers"
+    artVariant: "towers",
+    videoFile: "assets/video/1870-west-walkthrough.mp4",
+    videoPortrait: true
   },
   {
     slug: "gemini",
