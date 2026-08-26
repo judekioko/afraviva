@@ -281,7 +281,7 @@ const AFRAVIVA_PROPERTIES = [
     ],
     coverImage: "assets/img/kai aeria view.jpeg",
     artVariant: "coast",
-    video: "RGH4Ai-oCfU"
+    videoFile: "assets/video/kai-walkthrough.mp4"
   },
   {
     slug: "enaki",

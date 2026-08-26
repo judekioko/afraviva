@@ -159,23 +159,24 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach(el => el.classList.add("in"));
   }
 
-  /* ---- hero background video (homepage only): pause control + reduced-motion ---- */
-  const heroVideo = document.querySelector(".hero-video-bg");
+  /* ---- hero background videos (homepage only): pause control + reduced-motion ---- */
+  const heroVideos = document.querySelectorAll(".hero-video-bg");
   const heroToggle = document.querySelector(".hero-video-toggle");
-  if(heroVideo){
+  if(heroVideos.length){
     const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if(reducedMotion){
-      heroVideo.pause();
-      heroVideo.removeAttribute("autoplay");
+      heroVideos.forEach(v => { v.pause(); v.removeAttribute("autoplay"); });
     }
     if(heroToggle){
       const iconPause = heroToggle.querySelector(".icon-pause");
       const iconPlay = heroToggle.querySelector(".icon-play");
       heroToggle.addEventListener("click", () => {
-        const nowPlaying = heroVideo.paused;
-        if(nowPlaying){ heroVideo.play().catch(() => {}); } else { heroVideo.pause(); }
+        const nowPlaying = heroVideos[0].paused;
+        heroVideos.forEach(v => {
+          if(nowPlaying){ v.play().catch(() => {}); } else { v.pause(); }
+        });
         heroToggle.setAttribute("aria-pressed", nowPlaying ? "true" : "false");
-        heroToggle.setAttribute("aria-label", nowPlaying ? "Pause background video" : "Play background video");
+        heroToggle.setAttribute("aria-label", nowPlaying ? "Pause background videos" : "Play background videos");
         iconPause.style.display = nowPlaying ? "" : "none";
         iconPlay.style.display = nowPlaying ? "none" : "";
       });
