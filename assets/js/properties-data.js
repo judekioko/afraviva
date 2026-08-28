@@ -279,7 +279,8 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/kai pool with view to the ocean.jpg", caption: "Rooftop pool — ocean view" },
       { src: "assets/img/kai balcon view.jpeg", caption: "Balcony with private bath" },
       { src: "assets/img/kai balcon view 1.jpeg", caption: "Balcony — ocean view" },
-      { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" }
+      { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" },
+      { src: "assets/img/kai diani marketing ad.jpeg", caption: "Kai Diani — The Ultimate Seaside Escape" }
     ],
     coverImage: "assets/img/kai aeria view.jpeg",
     artVariant: "coast",
