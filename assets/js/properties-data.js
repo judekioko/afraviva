@@ -279,7 +279,8 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/kai pool with view to the ocean.jpg", caption: "Rooftop pool — ocean view" },
       { src: "assets/img/kai balcon view.jpeg", caption: "Balcony with private bath" },
       { src: "assets/img/kai balcon view 1.jpeg", caption: "Balcony — ocean view" },
-      { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" }
+      { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" },
+      { src: "assets/img/kai diani marketing ad.jpeg", caption: "Kai Diani — The Ultimate Seaside Escape" }
     ],
     coverImage: "assets/img/kai aeria view.jpeg",
     artVariant: "coast",
@@ -368,6 +369,27 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Target occupancy", value: "Q1 2029" },
       { label: "Unit type", value: "One bed, split-level duplex with two seaside balcony views" }
     ],
+    gallery: [
+      { src: "assets/img/sensei exterior beachfront.jpeg", caption: "Exterior render — beachfront at sunset" },
+      { src: "assets/img/sensei aerial pool beach.jpeg", caption: "Aerial render — pool & beach" },
+      { src: "assets/img/sensei pool night.jpeg", caption: "Pool render — night" },
+      { src: "assets/img/sensei pool terrace evening.jpeg", caption: "Pool terrace render — evening" },
+      { src: "assets/img/sensei courtyard dusk.jpeg", caption: "Landscaped courtyard render — dusk" },
+      { src: "assets/img/sensei courtyard render.jpeg", caption: "Courtyard render — evening" },
+      { src: "assets/img/sensei garden walk to beach.jpeg", caption: "Landscaped garden walk to the beach" },
+      { src: "assets/img/sensei terrace ocean view.jpeg", caption: "Private terrace — ocean view" },
+      { src: "assets/img/sensei duplex living room.jpeg", caption: "Duplex living room render" },
+      { src: "assets/img/sensei living room lounge.jpeg", caption: "Living room — double-height lounge" },
+      { src: "assets/img/sensei dining kitchen.jpeg", caption: "Dining & kitchen render" },
+      { src: "assets/img/sensei bedroom ocean view.jpeg", caption: "Bedroom — ocean view" },
+      { src: "assets/img/sensei bedroom suite.jpeg", caption: "Bedroom suite — balcony view" },
+      { src: "assets/img/sensei workspace nook.jpeg", caption: "Workspace nook render" },
+      { src: "assets/img/sensei work studio.jpeg", caption: "The work studio" },
+      { src: "assets/img/sensei film lounge.jpeg", caption: "The film lounge" },
+      { src: "assets/img/sensei beach volleyball.jpeg", caption: "Beach volleyball court" },
+      { src: "assets/img/sensei beachfront lifestyle.jpeg", caption: "Beachfront lifestyle" }
+    ],
+    coverImage: "assets/img/sensei exterior beachfront.jpeg",
     artVariant: "coast"
   },
   {
