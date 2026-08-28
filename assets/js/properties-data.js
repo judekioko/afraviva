@@ -88,11 +88,10 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Parking", value: "1 car park" }
     ],
     gallery: [
-      { src: "assets/img/capricon aerialview.jpg", caption: "Aerial view" },
-      { src: "assets/img/capricon living room.jpg", caption: "Living room" },
-      { src: "assets/img/capricon living room1.jpg", caption: "Living & dining area" },
-      { src: "assets/img/capricon kitchen.jpg", caption: "Kitchen" },
-      { src: "assets/img/capricon bedroom.jpg", caption: "Bedroom" },
+      { src: "assets/img/capricon aerialview.jpg", caption: "Artist's impression — aerial view" },
+      { src: "assets/img/capricon living room.jpg", caption: "Artist's impression — living room" },
+      { src: "assets/img/capricon living room1.jpg", caption: "Artist's impression — living & dining area" },
+      { src: "assets/img/capricon bedroom.jpg", caption: "Artist's impression — bedroom" },
       { src: "assets/img/capricorn unit layout.jpeg", caption: "Unit floor plan" },
       { src: "assets/img/capricorn layout coloured.jpeg", caption: "Unit floor plan — styled" }
     ],
@@ -195,15 +194,15 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Payment plan", value: "30% deposit \u00B7 50% during construction \u00B7 20% on completion" }
     ],
     gallery: [
-      { src: "assets/img/gemini phase 2.jpg", caption: "Exterior render \u2014 night" },
-      { src: "assets/img/gemini living room.jpg", caption: "Living room" },
-      { src: "assets/img/gemini living room1.jpg", caption: "Living room \u2014 pool view" },
-      { src: "assets/img/gemini kitchen.jpg", caption: "Kitchen" },
-      { src: "assets/img/gemini bedroom.jpg", caption: "Bedroom" },
+      { src: "assets/img/gemini phase 2.jpg", caption: "Artist's impression \u2014 exterior at night" },
+      { src: "assets/img/gemini living room.jpg", caption: "Artist's impression \u2014 living room" },
+      { src: "assets/img/gemini living room1.jpg", caption: "Artist's impression \u2014 living room, pool view" },
+      { src: "assets/img/gemini kitchen.jpg", caption: "Artist's impression \u2014 kitchen" },
+      { src: "assets/img/gemini bedroom.jpg", caption: "Artist's impression \u2014 bedroom" },
       { src: "assets/img/gemini balcony relaxing area.jpg", caption: "Balcony" },
-      { src: "assets/img/gemini artcafte.jpg", caption: "Artcaff\u00E9" },
-      { src: "assets/img/gemini gym.jpg", caption: "Gym" },
-      { src: "assets/img/gemini rooftop play pouch.jpg", caption: "Rooftop paddle court" },
+      { src: "assets/img/gemini artcafte.jpg", caption: "Artist's impression \u2014 Artcaff\u00E9" },
+      { src: "assets/img/gemini gym.jpg", caption: "Artist's impression \u2014 gym" },
+      { src: "assets/img/gemini rooftop play pouch.jpg", caption: "Artist's impression \u2014 rooftop paddle court" },
       { src: "assets/img/gemini under construction.jpg", caption: "Under construction" }
     ],
     coverImage: "assets/img/gemini phase 2.jpg",
@@ -273,13 +272,13 @@ const AFRAVIVA_PROPERTIES = [
     ],
     gallery: [
       { src: "assets/img/kai diani.jpg", caption: "Diani — seaside setting" },
-      { src: "assets/img/kai aeria view.jpeg", caption: "Aerial view" },
-      { src: "assets/img/kai living area.jpg", caption: "Living area" },
+      { src: "assets/img/kai aeria view.jpeg", caption: "Artist's impression — aerial view" },
+      { src: "assets/img/kai living area.jpg", caption: "Artist's impression — living area" },
       { src: "assets/img/kai pool area.jpg", caption: "Pool area — evening" },
       { src: "assets/img/kai pool with view to the ocean.jpg", caption: "Rooftop pool — ocean view" },
-      { src: "assets/img/kai balcon view.jpeg", caption: "Balcony with private bath" },
-      { src: "assets/img/kai balcon view 1.jpeg", caption: "Balcony — ocean view" },
-      { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" },
+      { src: "assets/img/kai balcon view.jpeg", caption: "Artist's impression — balcony with private bath" },
+      { src: "assets/img/kai balcon view 1.jpeg", caption: "Artist's impression — balcony, ocean view" },
+      { src: "assets/img/kai interior renders.jpeg", caption: "Artist's impression — bedroom, ocean view" },
       { src: "assets/img/kai diani marketing ad.jpeg", caption: "Kai Diani — The Ultimate Seaside Escape" }
     ],
     coverImage: "assets/img/kai aeria view.jpeg",
@@ -334,9 +333,9 @@ const AFRAVIVA_PROPERTIES = [
       "Golf cart route"
     ],
     gallery: [
-      { src: "assets/img/enaki.jpeg", caption: "Landscaped garden walk" },
-      { src: "assets/img/enaki aerial view.jpeg", caption: "Aerial view" },
-      { src: "assets/img/enaki apartment view.jpeg", caption: "Exterior — entrance" }
+      { src: "assets/img/enaki.jpeg", caption: "Artist's impression — landscaped garden walk" },
+      { src: "assets/img/enaki aerial view.jpeg", caption: "Artist's impression — aerial view" },
+      { src: "assets/img/enaki apartment view.jpeg", caption: "Artist's impression — exterior, entrance" }
     ],
     coverImage: "assets/img/enaki apartment view.jpeg",
     artVariant: "towers"
