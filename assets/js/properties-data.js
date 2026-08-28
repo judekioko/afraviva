@@ -279,7 +279,11 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/kai pool with view to the ocean.jpg", caption: "Rooftop pool — ocean view" },
       { src: "assets/img/kai balcon view.jpeg", caption: "Balcony with private bath" },
       { src: "assets/img/kai balcon view 1.jpeg", caption: "Balcony — ocean view" },
-      { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" }
+      { src: "assets/img/kai interior renders.jpeg", caption: "Bedroom — ocean view" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.58 (1).jpeg", caption: "The ultimate seaside escape — pool bar & lounge" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.58 (2).jpeg", caption: "Landscaped courtyard walkway at dusk" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.58.jpeg", caption: "Rooftop pool — evening" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.59.jpeg", caption: "Pool waterfall & children's play area" }
     ],
     coverImage: "assets/img/kai aeria view.jpeg",
     artVariant: "coast",
@@ -368,6 +372,23 @@ const AFRAVIVA_PROPERTIES = [
       { label: "Target occupancy", value: "Q1 2029" },
       { label: "Unit type", value: "One bed, split-level duplex with two seaside balcony views" }
     ],
+    gallery: [
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.55 (1).jpeg", caption: "A prestigious beachfront address — Nyali's Greenwood Drive" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.54 (2).jpeg", caption: "Aerial view — limited oceanfront supply" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.55.jpeg", caption: "Iconic courtyards" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.56.jpeg", caption: "Duplex collection — double-height lounge" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.56 (1).jpeg", caption: "The statement lounge" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.56 (2).jpeg", caption: "Refined dining & entertainer's kitchen" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.56 (3).jpeg", caption: "Private suites — upper-level bedroom" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.57 (1).jpeg", caption: "Private suites — seaview bedroom" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.55 (2).jpeg", caption: "Elevated private terrace" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.57.jpeg", caption: "Discreet workspace nook" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.53 (1).jpeg", caption: "The private film lounge & snack bar" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.53.jpeg", caption: "The work studio" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.54.jpeg", caption: "Wellness in motion — beach volleyball court" },
+      { src: "assets/img/WhatsApp Image 2026-08-27 at 23.49.54 (1).jpeg", caption: "Landscaped garden walk to the beach" }
+    ],
+    coverImage: "assets/img/WhatsApp Image 2026-08-27 at 23.49.55 (1).jpeg",
     artVariant: "coast"
   },
   {
