@@ -318,6 +318,52 @@ function afravivaRenderLedger(containerId){
 }
 
 /* ===========================================================
+   Property page — auto-advancing photo gallery carousel
+   =========================================================== */
+function afravivaInitCarousel(containerId, intervalMs){
+  const el = document.getElementById(containerId);
+  if(!el) return;
+
+  const slides = [...el.querySelectorAll(".gc-slide")];
+  const dots = [...el.querySelectorAll(".gc-dot")];
+  const prevBtn = el.querySelector(".gc-prev");
+  const nextBtn = el.querySelector(".gc-next");
+  if(slides.length < 2) return;
+
+  let index = 0;
+  let timer = null;
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function show(i){
+    index = (i + slides.length) % slides.length;
+    slides.forEach((s, n) => {
+      s.classList.toggle("active", n === index);
+      s.setAttribute("aria-hidden", n === index ? "false" : "true");
+    });
+    dots.forEach((d, n) => d.classList.toggle("active", n === index));
+  }
+  function next(){ show(index + 1); }
+  function prev(){ show(index - 1); }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  function start(){
+    if(reducedMotion) return;
+    stop();
+    timer = setInterval(next, intervalMs || 4500);
+  }
+
+  prevBtn && prevBtn.addEventListener("click", () => { prev(); start(); });
+  nextBtn && nextBtn.addEventListener("click", () => { next(); start(); });
+  dots.forEach((d, n) => d.addEventListener("click", () => { show(n); start(); }));
+
+  el.addEventListener("mouseenter", stop);
+  el.addEventListener("mouseleave", start);
+  el.addEventListener("focusin", stop);
+  el.addEventListener("focusout", start);
+
+  start();
+}
+
+/* ===========================================================
    Listing page filters
    =========================================================== */
 function afravivaInitFilters(gridId){

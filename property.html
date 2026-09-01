@@ -181,12 +181,20 @@
       <div class="wrap">
         <span class="eyebrow">Gallery</span>
         <h2 style="margin-bottom:28px;">Inside ${p.name}.</h2>
-        <div class="photo-grid">
-          ${p.gallery.map(g => `
-            <div class="photo-item">
-              <img src="${g.src}" alt="${p.name} — ${g.caption}" loading="lazy">
-              <span class="photo-caption">${g.caption}</span>
-            </div>`).join("")}
+        <div class="gallery-carousel" id="gallery-carousel" role="region" aria-roledescription="carousel" aria-label="${p.name} photo gallery">
+          <div class="gc-track">
+            ${p.gallery.map((g, i) => `
+              <div class="gc-slide${i === 0 ? " active" : ""}" aria-hidden="${i === 0 ? "false" : "true"}">
+                <img src="${g.src}" alt="${p.name} — ${g.caption}" loading="${i === 0 ? "eager" : "lazy"}">
+                <span class="photo-caption">${g.caption}</span>
+              </div>`).join("")}
+          </div>
+          ${p.gallery.length > 1 ? `
+          <button type="button" class="gc-arrow gc-prev" aria-label="Previous photo">‹</button>
+          <button type="button" class="gc-arrow gc-next" aria-label="Next photo">›</button>
+          <div class="gc-dots">
+            ${p.gallery.map((g, i) => `<button type="button" class="gc-dot${i === 0 ? " active" : ""}" aria-label="Go to photo ${i + 1} of ${p.gallery.length}"></button>`).join("")}
+          </div>` : ""}
         </div>
       </div>
     </div>` : "";
@@ -299,6 +307,7 @@
     el.href = whatsappLink(el.dataset.whatsapp === "general" ? null : el.dataset.whatsapp);
   });
   /* form submit handling (routes to WhatsApp) is wired centrally in main.js */
+  afravivaInitCarousel("gallery-carousel");
 
   const related = AFRAVIVA_PROPERTIES.filter(x => x.slug !== p.slug && x.region === p.region).slice(0,3);
   const fallback = related.length ? related : AFRAVIVA_PROPERTIES.filter(x => x.slug !== p.slug).slice(0,3);
