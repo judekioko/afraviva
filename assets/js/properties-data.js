@@ -27,11 +27,12 @@ const AFRAVIVA_PROPERTIES = [
     ledgerRow: "below",
     beds: "3 bedroom",
     description: "The first Afra<span class=\"v-flag\">V</span>iva address ready to walk into. Marquis Residency sits on a quiet Kileleshwa side street, close enough to Nairobi's business districts for an easy commute, far enough for the street to stay calm after 6pm.",
-    longDescription: "Kileleshwa and neighbouring Lavington Green have spent a decade becoming Nairobi's most reliable mid-rise address for professionals who want space without a long commute. Marquis Residency adds to that with finished, fully furnished and serviced units — what you view is what you move into, not a rendering of what might be. Suited to stays from a few nights to a long-term lease.",
+    longDescription: "Kileleshwa and neighbouring Lavington Green have spent a decade becoming Nairobi's most reliable mid-rise address for professionals who want space without a long commute. Marquis Residency adds to that with finished, fully furnished and serviced units — what you view is what you move into, not a rendering of what might be. Interiors are styled by Salma Amour. Suited to stays from a few nights to a long-term lease.",
     facts: [
       { label: "Status", value: "Ready now" },
       { label: "Unit size", value: "153 sqm gross area" },
       { label: "Developer", value: "Hayer One" },
+      { label: "Interior design", value: "Salma Amour" },
       { label: "Neighbourhood", value: "Kileleshwa / Lavington Green" }
     ],
     specs: [
