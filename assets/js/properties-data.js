@@ -387,7 +387,7 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/sensei work studio.jpeg", caption: "Artist's impression — the work studio" },
       { src: "assets/img/sensei film lounge.jpeg", caption: "Artist's impression — the film lounge" },
       { src: "assets/img/sensei beach volleyball.jpeg", caption: "Artist's impression — beach volleyball court" },
-      { src: "assets/img/sensei beachfront lifestyle.jpeg", caption: "Artist's impression — beachfront lifestyle" }
+      { src: "assets/img/sensei beachfront lifestyle.jpeg", caption: "“For the part of you that only exists by the sea.”" }
     ],
     coverImage: "assets/img/sensei exterior beachfront.jpeg",
     artVariant: "coast"
