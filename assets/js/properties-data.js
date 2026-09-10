@@ -57,7 +57,10 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/marquis playground for kids1.jpg", caption: "Children's playground — swings" }
     ],
     coverImage: "assets/img/marquis general view.jpg",
-    artVariant: "towers"
+    artVariant: "towers",
+    videos: [
+      { src: "assets/video/marquis video.mp4" }
+    ]
   },
   {
     slug: "capricorn",
@@ -212,7 +215,8 @@ const AFRAVIVA_PROPERTIES = [
     coverImage: "assets/img/gemini phase 2.jpg",
     artVariant: "towers",
     videos: [
-      { src: "assets/video/gemini.mp4", portrait: true }
+      { src: "assets/video/gemini.mp4", portrait: true, label: "Amenities tour" },
+      { src: "assets/video/gemini video.mp4", portrait: true, label: "Rooftop pool & lifestyle" }
     ]
   },
   {

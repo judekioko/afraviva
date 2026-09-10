@@ -257,7 +257,11 @@
     </div>
 
     <div class="p-hero">
-      <div class="p-hero-art">${p.coverImage ? `<img src="${p.coverImage}" alt="${p.name}">` : afravivaArt(p.artVariant, p.status)}</div>
+      <div class="p-hero-art">${
+        (p.videos && p.videos.length)
+          ? `<video class="p-hero-video" autoplay muted loop playsinline preload="metadata" ${p.coverImage ? `poster="${p.coverImage}"` : ""}><source src="${p.videos[0].src}" type="video/mp4"></video>`
+          : (p.coverImage ? `<img src="${p.coverImage}" alt="${p.name}">` : afravivaArt(p.artVariant, p.status))
+      }</div>
       <div class="p-hero-info wrap" style="padding-left:0;">
         <span class="eyebrow">${p.neighbourhood} · ${p.regionLabel}</span>
         <h1 class="p-name">${p.name}</h1>
@@ -305,6 +309,12 @@
   });
   /* form submit handling (routes to WhatsApp) is wired centrally in main.js */
   afravivaInitCarousel("gallery-carousel");
+
+  const heroVideo = document.querySelector(".p-hero-video");
+  if(heroVideo && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    heroVideo.removeAttribute("autoplay");
+    heroVideo.pause();
+  }
 
   const related = AFRAVIVA_PROPERTIES.filter(x => x.slug !== p.slug && x.region === p.region).slice(0,3);
   const fallback = related.length ? related : AFRAVIVA_PROPERTIES.filter(x => x.slug !== p.slug).slice(0,3);

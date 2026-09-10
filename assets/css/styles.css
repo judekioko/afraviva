@@ -148,27 +148,37 @@ p{ margin: 0 0 14px; color: var(--ink); }
 .stat-num{ font-family: var(--f-serif); font-size: 32px; font-weight: 600; color: var(--forest); }
 .stat-label{ font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
 
-/* ---------- hero: two looping video halves (homepage only) ---------- */
-.hero-split{ position: relative; display: grid; grid-template-columns: 1fr 1fr; min-height: 560px; }
-.hero-half{
+/* ---------- hero: rotating video reel (homepage only) ---------- */
+.hero-reel{
   position: relative; overflow: hidden; background: var(--forest-dark);
+  display: flex; align-items: center; padding: 64px 40px; min-height: 620px;
 }
-.hero-half-video{ display: flex; align-items: center; padding: 64px 40px; }
+.hero-reel-videos{ position: absolute; inset: 0; z-index: 0; }
 .hero-video-bg{
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; z-index: 0;
 }
+.hero-reel-slide{ opacity: 0; transition: opacity 1s ease; }
+.hero-reel-slide.active{ opacity: 1; z-index: 1; }
 .hero-scrim{
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(180deg, rgba(27,47,38,0.55), rgba(27,47,38,0.78));
 }
 .hero-content{ position: relative; z-index: 2; max-width: 480px; }
-.hero-half .eyebrow{ color: var(--gold); }
-.hero-half h1{ color: var(--paper); }
-.hero-half .lede{ color: rgba(251,249,242,0.85); }
-.hero-half .stat-num{ color: var(--paper); }
-.hero-half .stat-label{ color: rgba(251,249,242,0.65); }
-.hero-half .photo-caption{ z-index: 2; font-size: 13px; padding: 10px 14px; }
+.hero-reel .eyebrow{ color: var(--gold); }
+.hero-reel h1{ color: var(--paper); }
+.hero-reel .lede{ color: rgba(251,249,242,0.85); }
+.hero-reel .stat-num{ color: var(--paper); }
+.hero-reel .stat-label{ color: rgba(251,249,242,0.65); }
+.hero-reel-caption{
+  position: absolute; left: 40px; bottom: 24px; z-index: 3;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.hero-reel-name{ font-family: var(--f-serif); font-size: 18px; font-weight: 600; color: var(--paper); }
+.hero-reel-sub{
+  font-family: var(--f-mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.05em; color: rgba(251,249,242,0.7);
+}
 .hero-video-toggle{
   position: absolute; right: 20px; bottom: 20px; z-index: 3;
   width: 36px; height: 36px; border-radius: 50%;
@@ -183,11 +193,11 @@ p{ margin: 0 0 14px; color: var(--ink); }
 }
 
 @media (max-width: 900px){
-  .hero-split{ grid-template-columns: 1fr; min-height: 0; }
-  .hero-half-video:last-of-type{ min-height: 280px; padding: 0; }
+  .hero-reel{ min-height: 0; }
 }
 @media (max-width: 640px){
-  .hero-half-video:first-of-type{ padding: 56px 24px 44px; }
+  .hero-reel{ padding: 56px 24px 60px; }
+  .hero-reel-caption{ left: 24px; bottom: 16px; }
 }
 .p-card-art{
   aspect-ratio: 4/3; overflow: hidden; background: var(--paper-alt);
@@ -421,7 +431,7 @@ a.p-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
 /* ---------- property detail page ---------- */
 .p-hero{ background: var(--paper-alt); }
 .p-hero-art{ width: 100%; aspect-ratio: 16/6; overflow: hidden; }
-.p-hero-art svg, .p-hero-art img{ width: 100%; height: 100%; display: block; object-fit: cover; }
+.p-hero-art svg, .p-hero-art img, .p-hero-art video{ width: 100%; height: 100%; display: block; object-fit: cover; }
 .p-hero-info{ padding: 36px 28px 44px; }
 .p-name{ margin: 8px 0 10px; }
 .p-loc{ font-family: var(--f-mono); font-size: 13px; color: var(--muted); margin-bottom: 16px; }
@@ -580,9 +590,9 @@ a.p-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
   .gc-prev{ left: 10px; }
   .gc-next{ right: 10px; }
   .hero-content{ max-width: none; }
-  .hero-half-video h1{ font-size: 30px; }
-  .hero-half-video .lede{ font-size: 15px; line-height: 1.5; }
-  .hero-half-video .hero-cta{ margin: 20px 0 28px; }
+  .hero-reel h1{ font-size: 30px; }
+  .hero-reel .lede{ font-size: 15px; line-height: 1.5; }
+  .hero-reel .hero-cta{ margin: 20px 0 28px; }
   .hero-meta{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 20px; }
   .hero-video-toggle{ right: 14px; bottom: 14px; }
   .hero-embed-frame{ max-width: none; }
