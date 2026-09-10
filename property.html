@@ -199,24 +199,21 @@
       </div>
     </div>` : "";
 
-  const videoHTML = (p.video || p.videoFile) ? `
+  const videoHTML = (p.videos && p.videos.length) ? `
     <div class="section-tight">
       <div class="wrap">
         <span class="eyebrow">Watch</span>
         <h2 style="margin-bottom:28px;">See ${p.name}.</h2>
-        <div class="video-embed-card${p.videoPortrait ? " video-embed-card-portrait" : ""}">
-          ${p.video ? `
-          <iframe
-            src="https://www.youtube.com/embed/${p.video}"
-            title="${p.name} — video"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>` : `
-          <video controls playsinline preload="metadata" ${p.coverImage ? `poster="${p.coverImage}"` : ""}>
-            <source src="${p.videoFile}" type="video/mp4">
-          </video>`}
+        <div class="video-grid">
+          ${p.videos.map(v => `
+            <div class="video-block">
+              ${p.videos.length > 1 && v.label ? `<div class="video-label">${v.label}</div>` : ""}
+              <div class="video-embed-card${v.portrait ? " video-embed-card-portrait" : ""}">
+                <video controls playsinline preload="metadata" ${p.coverImage ? `poster="${p.coverImage}"` : ""}>
+                  <source src="${v.src}" type="video/mp4">
+                </video>
+              </div>
+            </div>`).join("")}
         </div>
       </div>
     </div>` : "";
