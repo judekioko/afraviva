@@ -98,7 +98,9 @@ const AFRAVIVA_PROPERTIES = [
     ],
     coverImage: "assets/img/capricon aerialview.jpg",
     artVariant: "towers",
-    videoFile: "assets/video/capricorn-walkthrough.mp4"
+    videos: [
+      { src: "assets/video/capricorn-walkthrough.mp4" }
+    ]
   },
   {
     slug: "1870-west",
@@ -137,8 +139,9 @@ const AFRAVIVA_PROPERTIES = [
     ],
     coverImage: "assets/img/1870 under construction1.jpg",
     artVariant: "towers",
-    videoFile: "assets/video/1870-west-walkthrough.mp4",
-    videoPortrait: true
+    videos: [
+      { src: "assets/video/1870 west.mp4" }
+    ]
   },
   {
     slug: "gemini",
@@ -207,7 +210,10 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/gemini under construction.jpg", caption: "Under construction" }
     ],
     coverImage: "assets/img/gemini phase 2.jpg",
-    artVariant: "towers"
+    artVariant: "towers",
+    videos: [
+      { src: "assets/video/gemini.mp4", portrait: true }
+    ]
   },
   {
     slug: "kai-apartments",
@@ -284,7 +290,9 @@ const AFRAVIVA_PROPERTIES = [
     ],
     coverImage: "assets/img/kai aeria view.jpeg",
     artVariant: "coast",
-    videoFile: "assets/video/kai-walkthrough.mp4"
+    videos: [
+      { src: "assets/video/kai-walkthrough.mp4" }
+    ]
   },
   {
     slug: "enaki",
@@ -339,7 +347,11 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/enaki apartment view.jpeg", caption: "Artist's impression — exterior, entrance" }
     ],
     coverImage: "assets/img/enaki apartment view.jpeg",
-    artVariant: "towers"
+    artVariant: "towers",
+    videos: [
+      { src: "assets/video/enaki.mp4", label: "Walkthrough" },
+      { src: "assets/video/enaki interior.mp4", label: "Interior tour" }
+    ]
   },
   {
     slug: "sensei",
