@@ -159,28 +159,26 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach(el => el.classList.add("in"));
   }
 
-  /* ---- hero background videos (homepage only): pause control + reduced-motion ---- */
-  const heroVideos = document.querySelectorAll(".hero-video-bg");
+  /* ---- homepage hero video reel: pause/play toggle ----
+     afravivaInitHeroReel (called from index.html's own inline script,
+     which runs before this DOMContentLoaded handler fires) owns
+     building the slides, the initial autoplay/reduced-motion check,
+     and advancing on "ended" — this just wires the manual toggle to
+     whichever slide is currently active. */
   const heroToggle = document.querySelector(".hero-video-toggle");
-  if(heroVideos.length){
-    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if(reducedMotion){
-      heroVideos.forEach(v => { v.pause(); v.removeAttribute("autoplay"); });
-    }
-    if(heroToggle){
-      const iconPause = heroToggle.querySelector(".icon-pause");
-      const iconPlay = heroToggle.querySelector(".icon-play");
-      heroToggle.addEventListener("click", () => {
-        const nowPlaying = heroVideos[0].paused;
-        heroVideos.forEach(v => {
-          if(nowPlaying){ v.play().catch(() => {}); } else { v.pause(); }
-        });
-        heroToggle.setAttribute("aria-pressed", nowPlaying ? "true" : "false");
-        heroToggle.setAttribute("aria-label", nowPlaying ? "Pause background videos" : "Play background videos");
-        iconPause.style.display = nowPlaying ? "" : "none";
-        iconPlay.style.display = nowPlaying ? "none" : "";
-      });
-    }
+  if(heroToggle){
+    const iconPause = heroToggle.querySelector(".icon-pause");
+    const iconPlay = heroToggle.querySelector(".icon-play");
+    heroToggle.addEventListener("click", () => {
+      const active = document.querySelector(".hero-reel-slide.active");
+      if(!active) return;
+      const nowPlaying = active.paused;
+      if(nowPlaying){ active.play().catch(() => {}); } else { active.pause(); }
+      heroToggle.setAttribute("aria-pressed", nowPlaying ? "true" : "false");
+      heroToggle.setAttribute("aria-label", nowPlaying ? "Pause background video" : "Play background video");
+      iconPause.style.display = nowPlaying ? "" : "none";
+      iconPlay.style.display = nowPlaying ? "none" : "";
+    });
   }
 
   /* ---- wire up any WhatsApp buttons ---- */
@@ -279,6 +277,57 @@ function afravivaCardHTML(p){
       </div>
     </div>
   </a>`;
+}
+
+/* ===========================================================
+   Homepage hero — rotating video reel, one property at a time
+   =========================================================== */
+function afravivaInitHeroReel(videosContainerId, captionId){
+  const mount = document.getElementById(videosContainerId);
+  const caption = document.getElementById(captionId);
+  if(!mount) return;
+
+  const slides = [];
+  AFRAVIVA_PROPERTIES.forEach(p => {
+    (p.videos || []).forEach(v => {
+      slides.push({
+        src: v.src,
+        poster: p.coverImage || "",
+        name: p.name,
+        sub: v.label || (p.neighbourhood || "").split(/[,/]/)[0].trim()
+      });
+    });
+  });
+  if(!slides.length) return;
+
+  mount.innerHTML = slides.map((s, i) => `
+    <video class="hero-video-bg hero-reel-slide${i === 0 ? " active" : ""}" muted playsinline preload="metadata"${s.poster ? ` poster="${s.poster}"` : ""}>
+      <source src="${s.src}" type="video/mp4">
+    </video>`).join("");
+
+  const videoEls = [...mount.querySelectorAll("video")];
+  let index = 0;
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function updateCaption(){
+    if(!caption) return;
+    caption.innerHTML = `<span class="hero-reel-name">${slides[index].name}</span><span class="hero-reel-sub">${slides[index].sub}</span>`;
+  }
+
+  function showSlide(next){
+    videoEls[index].classList.remove("active");
+    videoEls[index].pause();
+    index = next;
+    videoEls[index].classList.add("active");
+    videoEls[index].currentTime = 0;
+    updateCaption();
+    if(!reducedMotion){ videoEls[index].play().catch(() => {}); }
+  }
+
+  videoEls.forEach(v => v.addEventListener("ended", () => showSlide((index + 1) % videoEls.length)));
+
+  updateCaption();
+  if(!reducedMotion){ videoEls[0].play().catch(() => {}); }
 }
 
 /* ===========================================================
