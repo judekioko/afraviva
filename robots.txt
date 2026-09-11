@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://judekioko.github.io/afraviva/sitemap.xml
+Sitemap: https://homes.afraviva.com/sitemap.xml
