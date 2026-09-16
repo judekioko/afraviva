@@ -113,7 +113,7 @@ const SITE_FOOTER_HTML = `<footer class="site-footer">
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Afra<span class="v-flag">V</span>iva Homes, part of the <a href="https://africanext.biz" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">AfricaNext Group</a>. All rights reserved.</span>
+      <span>© 2026 Afra<span class="v-flag">V</span>iva Homes, part of the <a href="https://africanext.biz" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">AfricaNext Group</a>. All rights reserved. · Site developed by Jude Kioko</span>
       <span>Nairobi · Diani · Mombasa</span>
     </div>
   </div>
