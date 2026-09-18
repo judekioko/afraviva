@@ -68,6 +68,20 @@ const AFRAVIVA_PROPERTIES = [
         { name: "The Wine & Bottle Restaurant", note: "4.6★ · 5 min walk" },
         { name: "The Mugumo", note: "4.2★ · Traditional Kenyan fare · 10 min walk" },
         { name: "Café Naimora", note: "4.8★ · One of Nairobi's top-ranked café-restos · 10 min walk — try the coconut fish" }
+      ],
+      shopping: [
+        { name: "Lavington Mall", note: "Naivas, Java House & boutiques" },
+        { name: "Junction Mall", note: "Naivas, Carrefour, cinema & dining" },
+        { name: "Yaya Centre", note: "Kilimani, short drive" }
+      ],
+      publicServices: [
+        { name: "Kileleshwa Medical Plaza", note: "Local clinic" },
+        { name: "The Nairobi Hospital", note: "~15 min · Upper Hill" },
+        { name: "Nairobi Women's Hospital", note: "Hurlingham" }
+      ],
+      recreation: [
+        { name: "Nairobi Arboretum", note: "Walking trails, picnics & yoga" },
+        { name: "Karura Forest", note: "Hiking, cycling & waterfall trails" }
       ]
     }
   },
@@ -112,7 +126,31 @@ const AFRAVIVA_PROPERTIES = [
     artVariant: "towers",
     videos: [
       { src: "assets/video/capricorn-walkthrough.mp4" }
-    ]
+    ],
+    nearby: {
+      dining: [
+        { name: "CJs Kilimani", note: "4.9★ · Mexican & American" },
+        { name: "Crave Kenya Kilimani", note: "4.9★ · Italian & American" },
+        { name: "Sierra Brasserie", note: "4.2★ · Bar & European, by Yaya Centre" },
+        { name: "Habesha", note: "4.2★ · Ethiopian & African" },
+        { name: "Artcaffé — Yaya Centre", note: "Coffee, cakes & all-day dining" }
+      ],
+      shopping: [
+        { name: "Yaya Centre", note: "Directly across the street" },
+        { name: "Prestige Plaza", note: "Ngong Road · Naivas supermarket & Prestige Cinema" },
+        { name: "Adlife Plaza", note: "Chania Avenue · Chandarana Foodplus" }
+      ],
+      publicServices: [
+        { name: "The Nairobi Hospital", note: "Leading private hospital, Upper Hill" },
+        { name: "Nairobi Women's Hospital", note: "Adams Arcade" },
+        { name: "Coptic Hospital", note: "Ngong Road" }
+      ],
+      recreation: [
+        { name: "Nairobi Arboretum", note: "~1km · Forest walking trails" },
+        { name: "Uhuru Park", note: "~1.2km" },
+        { name: "University of Nairobi grounds", note: "~1.2km" }
+      ]
+    }
   },
   {
     slug: "1870-west",
@@ -153,7 +191,28 @@ const AFRAVIVA_PROPERTIES = [
     artVariant: "towers",
     videos: [
       { src: "assets/video/1870 west.mp4" }
-    ]
+    ],
+    nearby: {
+      dining: [
+        { name: "Haandi Restaurant", note: "Westlands · Indian cuisine" },
+        { name: "Akira Modern Asia", note: "Inside Westgate Mall · Asian fusion" },
+        { name: "Fonda's", note: "Sarit Centre · Mexican" },
+        { name: "Ocean Basket", note: "Seafood, Westgate/Sarit area" }
+      ],
+      shopping: [
+        { name: "Westgate Shopping Mall", note: "80+ stores, right between the towers" },
+        { name: "Sarit Centre", note: "Anchor Westlands mall" },
+        { name: "The Mall, Westlands", note: "Additional retail" }
+      ],
+      publicServices: [
+        { name: "Aga Khan University Hospital", note: "Westlands" },
+        { name: "MP Shah Hospital", note: "Westlands" },
+        { name: "Aga Khan Academy", note: "Westlands" }
+      ],
+      recreation: [
+        { name: "Nairobi National Museum", note: "Short drive · Culture, nature & history" }
+      ]
+    }
   },
   {
     slug: "gemini",
@@ -226,7 +285,25 @@ const AFRAVIVA_PROPERTIES = [
     videos: [
       { src: "assets/video/gemini.mp4", portrait: true, label: "Amenities tour" },
       { src: "assets/video/gemini video.mp4", portrait: true, label: "Rooftop pool & lifestyle" }
-    ]
+    ],
+    nearby: {
+      dining: [
+        { name: "Haandi Restaurant", note: "Westlands · Indian cuisine" },
+        { name: "Fonda's", note: "Sarit Centre · Mexican" },
+        { name: "Ocean Basket", note: "Seafood, near Waiyaki Way" }
+      ],
+      shopping: [
+        { name: "Sarit Centre", note: "Westlands' anchor mall" },
+        { name: "Westgate Shopping Mall", note: "80+ stores" }
+      ],
+      publicServices: [
+        { name: "Aga Khan University Hospital", note: "Westlands" },
+        { name: "MP Shah Hospital", note: "Westlands" }
+      ],
+      recreation: [
+        { name: "Nairobi National Museum", note: "Short drive · Culture, nature & history" }
+      ]
+    }
   },
   {
     slug: "kai-apartments",
@@ -305,7 +382,27 @@ const AFRAVIVA_PROPERTIES = [
     artVariant: "coast",
     videos: [
       { src: "assets/video/kai-walkthrough.mp4" }
-    ]
+    ],
+    nearby: {
+      dining: [
+        { name: "Ali Barbour's Cave Restaurant", note: "Seafood in a natural cave setting" },
+        { name: "The Salty Squid", note: "Beachfront, Indian Ocean views" },
+        { name: "Shashin-Ka", note: "Japanese · Sushi" },
+        { name: "Tiki Bar", note: "Diani Beach Road · Cocktails & local fare" }
+      ],
+      shopping: [
+        { name: "Diani Beach Shopping Centre", note: "Supermarket, banks & dining" },
+        { name: "Carrefour Diani", note: "Central Diani" }
+      ],
+      publicServices: [
+        { name: "Diani Beach Hospital", note: "Matuga Plaza, Diani Beach Road" }
+      ],
+      recreation: [
+        { name: "Colobus Conservation", note: "Primate sanctuary & nature walks" },
+        { name: "Kisite-Mpunguti Marine National Park", note: "Kenya's first marine park, short drive south" },
+        { name: "Diani Beach", note: "Walking, swimming, watching the colobus monkeys" }
+      ]
+    }
   },
   {
     slug: "enaki",
@@ -364,7 +461,27 @@ const AFRAVIVA_PROPERTIES = [
     videos: [
       { src: "assets/video/enaki.mp4", label: "Walkthrough" },
       { src: "assets/video/enaki interior.mp4", label: "Interior tour" }
-    ]
+    ],
+    nearby: {
+      dining: [
+        { name: "Art Caffè", note: "Village Market" },
+        { name: "Jiko Restaurant", note: "Tribe Hotel · Local flavours" },
+        { name: "About Thyme", note: "Fine dining" },
+        { name: "La Villa Restaurant & Wine Bar", note: "Italian" },
+        { name: "River Café", note: "Karura Forest · Outdoor dining" }
+      ],
+      shopping: [
+        { name: "Village Market", note: "150+ retail outlets, Carrefour anchor" },
+        { name: "Friday Maasai Market", note: "Village Market parking garage · Handicrafts" }
+      ],
+      publicServices: [
+        { name: "MP Shah Village Medical Centre", note: "Limuru Road, ~2km" },
+        { name: "Nairobi Hospital Warwick Gigiri Outpatient Centre", note: "UN Avenue, ~1.2km" }
+      ],
+      recreation: [
+        { name: "Karura Forest", note: "Walking, cycling & waterfall trails" }
+      ]
+    }
   },
   {
     slug: "sensei",
@@ -415,7 +532,25 @@ const AFRAVIVA_PROPERTIES = [
       { src: "assets/img/sensei beachfront lifestyle.jpeg", caption: "“For the part of you that only exists by the sea.”" }
     ],
     coverImage: "assets/img/sensei exterior beachfront.jpeg",
-    artVariant: "coast"
+    artVariant: "coast",
+    nearby: {
+      dining: [
+        { name: "Tamarind Mombasa", note: "Nyali waterfront · Famed for seafood" },
+        { name: "Floating Island Restaurant", note: "4.5★ · Links Road · Seafood & BBQ over the water" },
+        { name: "Kingston Beach Lounge", note: "Beachfront" },
+        { name: "Cafesserie Mombasa", note: "All-day café dining" }
+      ],
+      shopping: [
+        { name: "City Mall Nyali", note: "~2km" },
+        { name: "Nyali Centre", note: "~2km" }
+      ],
+      publicServices: [
+        { name: "Premiere Hospital", note: "Links Road" }
+      ],
+      recreation: [
+        { name: "Haller Park", note: "Bamburi · Nature trails, giraffe feeding & wildlife sanctuary" }
+      ]
+    }
   },
   {
     slug: "eighth-address",
