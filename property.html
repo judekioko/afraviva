@@ -232,7 +232,7 @@
   ];
 
   const neighbourhoodHTML = (p.lat && p.lng) ? `
-    <div class="section-tight" style="background:var(--paper-alt);">
+    <div class="section-tight">
       <div class="wrap">
         <div class="section-head" style="margin-bottom:24px;">
           <div>
@@ -312,6 +312,8 @@
       </div>
     </div>
 
+    ${neighbourhoodHTML}
+
     <div class="wrap">
       <div class="p-body-grid">
         <div class="prose">
@@ -329,7 +331,6 @@
     ${amenitiesHTML}
     ${pricingHTML}
     ${investmentHTML}
-    ${neighbourhoodHTML}
     ${locationHTML}
 
     <div class="related-strip">
