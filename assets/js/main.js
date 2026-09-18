@@ -2,7 +2,7 @@
    AFRAVIVA HOMES — shared behaviour
    =========================================================== */
 
-const WHATSAPP_NUMBER = "254113781366";
+const WHATSAPP_NUMBER = "85267706337";
 
 function waLink(text){
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
