@@ -218,6 +218,47 @@
       </div>
     </div>` : "";
 
+  const NEARBY_ICONS = {
+    dining: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v7a2 2 0 0 0 2 2 2 2 0 0 0 2-2V2"/><path d="M8 11v11"/><path d="M17 2c1.5 2 1.5 6 0 8-.6.8-1 1.4-1 2.5V22"/></svg>`,
+    shopping: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>`,
+    publicServices: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-7h6v7"/></svg>`,
+    recreation: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-6"/><circle cx="12" cy="9" r="6.5"/></svg>`
+  };
+  const NEARBY_CATEGORIES = [
+    { key: "dining", label: "Dining", query: "Restaurants and cafes" },
+    { key: "shopping", label: "Shopping", query: "Shopping malls and stores" },
+    { key: "publicServices", label: "Public Services", query: "Hospitals, schools and churches" },
+    { key: "recreation", label: "Recreation", query: "Parks, museums and theatres" }
+  ];
+
+  const neighbourhoodHTML = (p.lat && p.lng) ? `
+    <div class="section-tight" style="background:var(--paper-alt);">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:24px;">
+          <div>
+            <span class="eyebrow">Around the address</span>
+            <h2>In the Neighbourhood.</h2>
+          </div>
+          <div class="n-tabs" role="tablist" aria-label="Nearby categories">
+            ${NEARBY_CATEGORIES.map((c, i) => `
+              <button type="button" class="filter-btn n-tab${i === 0 ? " active" : ""}" role="tab" aria-selected="${i === 0 ? "true" : "false"}" data-cat="${c.key}">
+                ${NEARBY_ICONS[c.key]}<span>${c.label}</span>
+              </button>`).join("")}
+          </div>
+        </div>
+        <div class="neighbourhood-panel">
+          <div class="map-embed-card n-map">
+            <iframe id="n-map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Map of ${NEARBY_CATEGORIES[0].label.toLowerCase()} near ${p.name}"
+              aria-label="Map of ${NEARBY_CATEGORIES[0].label.toLowerCase()} near ${p.name}"
+              src="https://maps.google.com/maps?q=${encodeURIComponent(NEARBY_CATEGORIES[0].query + " near " + p.neighbourhood)}&ll=${p.lat},${p.lng}&z=15&output=embed">
+            </iframe>
+          </div>
+          <div class="n-recs" id="n-recs" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>` : "";
+
   const locationHTML = (p.lat && p.lng) ? `
     <div class="section-tight">
       <div class="wrap">
@@ -288,6 +329,7 @@
     ${amenitiesHTML}
     ${pricingHTML}
     ${investmentHTML}
+    ${neighbourhoodHTML}
     ${locationHTML}
 
     <div class="related-strip">
@@ -309,6 +351,37 @@
   });
   /* form submit handling (routes to WhatsApp) is wired centrally in main.js */
   afravivaInitCarousel("gallery-carousel");
+
+  function renderNearbyRecs(catKey){
+    const list = (p.nearby && p.nearby[catKey]) || [];
+    const recsEl = document.getElementById("n-recs");
+    if(!recsEl) return;
+    recsEl.innerHTML = list.length ? `
+      <p class="n-recs-label">Recommended</p>
+      <ul class="n-rec-list">
+        ${list.map(r => `<li class="n-rec-item"><span class="n-rec-name">${r.name}</span><span class="n-rec-note">${r.note}</span></li>`).join("")}
+      </ul>` : `<p class="n-recs-empty">Recommendations for this category are coming soon — the map on the left is live in the meantime.</p>`;
+  }
+
+  const nTabs = document.querySelectorAll(".n-tab");
+  if(nTabs.length){
+    renderNearbyRecs(NEARBY_CATEGORIES[0].key);
+    nTabs.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const cat = NEARBY_CATEGORIES.find(c => c.key === btn.dataset.cat);
+        if(!cat) return;
+        nTabs.forEach(b => {
+          const isActive = b === btn;
+          b.classList.toggle("active", isActive);
+          b.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+        const frame = document.getElementById("n-map-frame");
+        frame.src = `https://maps.google.com/maps?q=${encodeURIComponent(cat.query + " near " + p.neighbourhood)}&ll=${p.lat},${p.lng}&z=15&output=embed`;
+        frame.title = `Map of ${cat.label.toLowerCase()} near ${p.name}`;
+        renderNearbyRecs(cat.key);
+      });
+    });
+  }
 
   const heroVideo = document.querySelector(".p-hero-video");
   if(heroVideo && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){

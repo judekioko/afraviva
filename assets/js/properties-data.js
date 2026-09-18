@@ -60,7 +60,16 @@ const AFRAVIVA_PROPERTIES = [
     artVariant: "towers",
     videos: [
       { src: "assets/video/marquis video.mp4" }
-    ]
+    ],
+    nearby: {
+      dining: [
+        { name: "ArtCafe", note: "Ground floor podium of The Marquis" },
+        { name: "Willow Garden Continental Restaurant", note: "4.4★ · 5 min walk" },
+        { name: "The Wine & Bottle Restaurant", note: "4.6★ · 5 min walk" },
+        { name: "The Mugumo", note: "4.2★ · Traditional Kenyan fare · 10 min walk" },
+        { name: "Café Naimora", note: "4.8★ · One of Nairobi's top-ranked café-restos · 10 min walk — try the coconut fish" }
+      ]
+    }
   },
   {
     slug: "capricorn",
