@@ -138,7 +138,8 @@ const AFRAVIVA_PROPERTIES = [
       shopping: [
         { name: "Yaya Centre", note: "Directly across the street" },
         { name: "Prestige Plaza", note: "Ngong Road · Naivas supermarket & Prestige Cinema" },
-        { name: "Adlife Plaza", note: "Chania Avenue · Chandarana Foodplus" }
+        { name: "Adlife Plaza", note: "Chania Avenue · Chandarana Foodplus" },
+        { name: "City Market", note: "~1 mile · Nairobi's historic fresh produce & crafts market" }
       ],
       publicServices: [
         { name: "The Nairobi Hospital", note: "Leading private hospital, Upper Hill" },
@@ -210,6 +211,8 @@ const AFRAVIVA_PROPERTIES = [
         { name: "Aga Khan Academy", note: "Westlands" }
       ],
       recreation: [
+        { name: "Maasai Market at Sarit Centre", note: "Wednesdays · Crafts, jewellery & art, on-site at Sarit" },
+        { name: "Riverside Park", note: "~3km · Riverside Drive · Green space, picnics & walking paths" },
         { name: "Nairobi National Museum", note: "Short drive · Culture, nature & history" }
       ]
     }
@@ -294,13 +297,16 @@ const AFRAVIVA_PROPERTIES = [
       ],
       shopping: [
         { name: "Sarit Centre", note: "Westlands' anchor mall" },
-        { name: "Westgate Shopping Mall", note: "80+ stores" }
+        { name: "Westgate Shopping Mall", note: "80+ stores" },
+        { name: "ABC Place", note: "Waiyaki Way · Shops, restaurants & offices, close to Brookside" }
       ],
       publicServices: [
         { name: "Aga Khan University Hospital", note: "Westlands" },
         { name: "MP Shah Hospital", note: "Westlands" }
       ],
       recreation: [
+        { name: "Riverside Park", note: "~1.5km · Riverside Drive · Green space, picnics & walking paths" },
+        { name: "Maasai Market at Sarit Centre", note: "Wednesdays · Crafts, jewellery & art" },
         { name: "Nairobi National Museum", note: "Short drive · Culture, nature & history" }
       ]
     }
@@ -400,7 +406,9 @@ const AFRAVIVA_PROPERTIES = [
       recreation: [
         { name: "Colobus Conservation", note: "Primate sanctuary & nature walks" },
         { name: "Kisite-Mpunguti Marine National Park", note: "Kenya's first marine park, short drive south" },
-        { name: "Diani Beach", note: "Walking, swimming, watching the colobus monkeys" }
+        { name: "Diani Beach", note: "Walking, swimming, watching the colobus monkeys" },
+        { name: "Kaya Kinondo Sacred Forest", note: "~8km south · Sacred Digo forest, guided nature walks" },
+        { name: "Leisure Lodge Golf & Country Club", note: "Diani Beach Road · 18-hole golf course" }
       ]
     }
   },
@@ -472,14 +480,16 @@ const AFRAVIVA_PROPERTIES = [
       ],
       shopping: [
         { name: "Village Market", note: "150+ retail outlets, Carrefour anchor" },
-        { name: "Friday Maasai Market", note: "Village Market parking garage · Handicrafts" }
+        { name: "Friday Maasai Market", note: "Village Market parking garage · Handicrafts" },
+        { name: "Two Rivers Mall", note: "~15 min via Limuru Road · East Africa's largest retail & entertainment complex" }
       ],
       publicServices: [
         { name: "MP Shah Village Medical Centre", note: "Limuru Road, ~2km" },
         { name: "Nairobi Hospital Warwick Gigiri Outpatient Centre", note: "UN Avenue, ~1.2km" }
       ],
       recreation: [
-        { name: "Karura Forest", note: "Walking, cycling & waterfall trails" }
+        { name: "Karura Forest", note: "Walking, cycling & waterfall trails" },
+        { name: "Ozone Trampoline Park & Bowling", note: "On-site at Village Market · Trampoline park, bowling alley & cinema" }
       ]
     }
   },
@@ -548,7 +558,8 @@ const AFRAVIVA_PROPERTIES = [
         { name: "Premiere Hospital", note: "Links Road" }
       ],
       recreation: [
-        { name: "Haller Park", note: "Bamburi · Nature trails, giraffe feeding & wildlife sanctuary" }
+        { name: "Haller Park", note: "Bamburi · Nature trails, giraffe feeding & wildlife sanctuary" },
+        { name: "Mamba Village Centre", note: "Bamburi · Africa's largest crocodile farm & botanical gardens" }
       ]
     }
   },
