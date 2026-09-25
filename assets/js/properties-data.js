@@ -544,6 +544,9 @@ const AFRAVIVA_PROPERTIES = [
     ],
     coverImage: "assets/img/sensei exterior beachfront.jpeg",
     artVariant: "coast",
+    videos: [
+      { src: "assets/video/sensei.mp4" }
+    ],
     nearby: {
       dining: [
         { name: "Tamarind Mombasa", note: "Nyali waterfront · Famed for seafood" },
