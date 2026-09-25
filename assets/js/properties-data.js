@@ -67,7 +67,8 @@ const AFRAVIVA_PROPERTIES = [
         { name: "Willow Garden Continental Restaurant", note: "4.4★ · 5 min walk" },
         { name: "The Wine & Bottle Restaurant", note: "4.6★ · 5 min walk" },
         { name: "The Mugumo", note: "4.2★ · Traditional Kenyan fare · 10 min walk" },
-        { name: "Café Naimora", note: "4.8★ · One of Nairobi's top-ranked café-restos · 10 min walk — try the coconut fish" }
+        { name: "Café Naimora", note: "4.8★ · One of Nairobi's top-ranked café-restos · 10 min walk — try the coconut fish" },
+        { name: "Pickled Café & Bar", note: "Olenguruone Ave, Kileleshwa" }
       ],
       shopping: [
         { name: "Lavington Mall", note: "Naivas, Java House & boutiques" },
