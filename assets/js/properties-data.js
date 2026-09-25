@@ -544,6 +544,7 @@ const AFRAVIVA_PROPERTIES = [
     ],
     coverImage: "assets/img/sensei exterior beachfront.jpeg",
     artVariant: "coast",
+    heroFullscreen: true,
     videos: [
       { src: "assets/video/sensei.mp4" }
     ],
