@@ -545,7 +545,7 @@ const AFRAVIVA_PROPERTIES = [
     coverImage: "assets/img/sensei exterior beachfront.jpeg",
     artVariant: "coast",
     videos: [
-      { src: "assets/video/sensei.mp4" }
+      { src: "assets/video/sensei.mp4", portrait: true }
     ],
     nearby: {
       dining: [
