@@ -627,3 +627,8 @@ a.p-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
   .section, .section-tight{ padding: 56px 0; }
   .ledger{ padding: 56px 0; }
 }
+
+/* Privacy notice under enquiry forms (they hand details to WhatsApp). */
+.form-privacy{ font-size: 12.5px; line-height: 1.5; color: var(--muted); margin: 6px 0 14px; }
+.form-privacy a{ color: inherit; text-decoration: underline; }
+.tbc-card .form-privacy{ margin: 10px 0 0; }

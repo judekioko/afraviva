@@ -97,7 +97,7 @@ const SITE_FOOTER_HTML = `<footer class="site-footer">
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Afra<span class="v-flag">V</span>iva Homes, part of the <a href="https://africanext.biz" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">AfricaNext Group</a>. All rights reserved. · Site developed by Jude Kioko</span>
+      <span>© 2026 Afra<span class="v-flag">V</span>iva Homes, part of the <a href="https://africanext.biz" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">AfricaNext Group</a>. All rights reserved. · <a href="https://afraviva.com/privacy/" style="color:inherit;text-decoration:underline;">Privacy Policy</a> · Site developed by Jude Kioko</span>
       <span>Nairobi · Diani · Mombasa</span>
     </div>
   </div>
@@ -241,6 +241,7 @@ function afravivaCardHTML(p){
           <input type="email" required placeholder="Email for updates" aria-label="Email for updates">
           <button type="submit">Notify</button>
         </form>
+        <p class="form-privacy">Sending opens WhatsApp, so your details reach us through WhatsApp (Meta). See our <a href="https://afraviva.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
       </div>
     </div>`;
   }
