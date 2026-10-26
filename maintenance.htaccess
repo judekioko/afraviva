@@ -1,0 +1,11 @@
+# Maintenance mode for homes.afraviva.com.
+# To take the site offline: copy these lines into the site's .htaccess (above
+# anything already there). Every request then gets HTTP 503 (temporary, so
+# search engines keep the listings) and sees maintenance.html. To bring the
+# site back, remove these lines again.
+ErrorDocument 503 /maintenance.html
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+RewriteCond %{REQUEST_URI} !^/assets/img/afraviva-logo\.png$
+RewriteRule ^ - [R=503,L]
+Header always set Retry-After "3600"
