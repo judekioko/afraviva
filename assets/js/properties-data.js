@@ -235,6 +235,13 @@ const AFRAVIVA_PROPERTIES = [
     beds: "2 bed",
     description: "\u201CWhere the stars live.\u201D Gemini rises in Westlands' Brookside pocket, near Waiyaki Way, from the team behind Capricorn — with Kenya's first rooftop paddle court, a heated infinity pool, and a skyline view over the city.",
     longDescription: "Gemini pairs a quiet Brookside address with resort-grade amenities rarely found outside a hotel: a courtyard pool and garden at ground level, a co-work space and private cinema for downtime, and a rooftop that turns into Kenya's first sky-high paddle court and heated infinity pool. Built by Staroot — the team behind Capricorn in Kilimani — with Proxima Real Estate as development consultants.",
+    award: {
+      title: "Best Mixed-Use Development, Africa",
+      badge: "Award-winning · Best Mixed-Use Development, Africa 2026–2027",
+      body: "Gemini Residency has been named Best Mixed-Use Development in Africa at the International Property Awards. Staroot Real Estate says the award recognises its commitment to innovation and to raising development standards in Kenya. Gemini brings together premium residences, exceptional lifestyle amenities and everyday conveniences in one thoughtfully designed development, blending luxury, comfort and convenience.",
+      source: "Five-star winner, African Property Awards 2026–2027 (Development), in association with International Property & Travel.",
+      image: "assets/img/gemini-award-2026.jpg"
+    },
     facts: [
       { label: "Status", value: "Under construction" },
       { label: "Unit size", value: "58 sqm gross area" },

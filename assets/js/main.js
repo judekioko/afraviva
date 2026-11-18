@@ -249,7 +249,7 @@ function afravivaCardHTML(p){
   return `
   <a class="p-card" href="property.html?slug=${p.slug}">
     <div class="p-card-art">
-      <span class="p-card-tag"><span class="tag ${tagClass}">${p.statusLabel}</span></span>
+      <span class="p-card-tag"><span class="tag ${tagClass}">${p.statusLabel}</span>${p.award ? `<span class="tag tag-award">&#9733; Award-winning</span>` : ""}</span>
       ${afravivaCardArtHTML(p)}
     </div>
     <div class="p-card-body">
