@@ -15,6 +15,67 @@ function whatsappLink(propertyName){
   return waLink(msg);
 }
 
+/* ---- opt-in soundtrack ----
+   Nothing plays until a visitor presses a Listen / Sound button: browsers
+   block sound that starts on its own, and unexpected audio drives people
+   off. One shared <audio> element, so starting a track stops any other;
+   it fades in and out, and stops when the visitor switches tabs. */
+const afravivaSound = (() => {
+  let audio = null, activeBtn = null, fadeTimer = null;
+  const VOLUME = 0.9;
+  function fade(to, ms, done){
+    clearInterval(fadeTimer);
+    const from = audio.volume, steps = Math.max(1, Math.round(ms / 40));
+    let i = 0;
+    fadeTimer = setInterval(() => {
+      i++;
+      audio.volume = Math.min(1, Math.max(0, from + (to - from) * i / steps));
+      if(i >= steps){ clearInterval(fadeTimer); if(done) done(); }
+    }, 40);
+  }
+  function show(btn, playing){
+    if(!btn) return;
+    btn.setAttribute("aria-pressed", playing ? "true" : "false");
+    btn.classList.toggle("is-playing", playing);
+    const label = btn.querySelector(".sound-label");
+    if(label) label.textContent = playing ? (btn.dataset.labelOn || "Pause") : (btn.dataset.labelOff || "Listen");
+  }
+  function stop(){
+    const btn = activeBtn;
+    activeBtn = null;
+    show(btn, false);
+    if(audio && !audio.paused) fade(0, 600, () => audio.pause());
+  }
+  function play(btn){
+    if(!audio){
+      audio = new Audio();
+      audio.preload = "none";
+      audio.addEventListener("ended", () => { show(activeBtn, false); activeBtn = null; });
+    }
+    if(activeBtn && activeBtn !== btn) show(activeBtn, false);
+    if(audio.dataset.src !== btn.dataset.sound){
+      audio.src = btn.dataset.sound;
+      audio.dataset.src = btn.dataset.sound;
+    } else if(audio.ended){
+      audio.currentTime = 0;
+    }
+    audio.loop = btn.dataset.soundLoop === "true";
+    clearInterval(fadeTimer);
+    audio.volume = 0;
+    activeBtn = btn;
+    show(btn, true);
+    audio.play().then(() => fade(VOLUME, 1000)).catch(() => { show(btn, false); activeBtn = null; });
+  }
+  document.addEventListener("click", e => {
+    const btn = e.target.closest("[data-sound]");
+    if(!btn) return;
+    e.preventDefault();
+    if(btn === activeBtn && audio && !audio.paused) stop(); else play(btn);
+  });
+  document.addEventListener("visibilitychange", () => { if(document.hidden) stop(); });
+  return { stop };
+})();
+
 /* All enquiry/notify forms have no backend — submitting hands the
    visitor's details to WhatsApp instead, since that's the one
    channel on this static site that actually reaches the business. */

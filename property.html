@@ -322,6 +322,7 @@
         <h1 class="p-name">${p.name}</h1>
         <div class="p-loc">${p.developer} &middot; ${p.quarterLabel}</div>
         ${p.award ? `<div class="p-award-badge">&#9733; ${p.award.badge}</div>` : ""}
+        ${p.audio ? `<button class="listen-btn" type="button" data-sound="${p.audio}" data-label-off="Listen to ${p.name}" data-label-on="Pause" aria-pressed="false" title="${p.audioIntro}"><span class="listen-icon" aria-hidden="true"></span><span class="sound-label">Listen to ${p.name}</span></button>` : ""}
         <p class="lede">${p.description}</p>
         <div class="facts-strip">${factsHTML}</div>
       </div>

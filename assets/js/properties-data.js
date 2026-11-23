@@ -13,6 +13,8 @@
 const AFRAVIVA_PROPERTIES = [
   {
     slug: "the-marquis",
+    audio: "assets/audio/the-marquis.mp3",  // placeholder: computer voice over a generated music bed
+    audioIntro: "Between Kileleshwa and Lavington Green\u2026 Marquis Residency.",
     name: "Marquis Residency",
     developer: "Hayer One",
     region: "nairobi",
@@ -88,6 +90,8 @@ const AFRAVIVA_PROPERTIES = [
   },
   {
     slug: "capricorn",
+    audio: "assets/audio/capricorn.mp3",  // placeholder: computer voice over a generated music bed
+    audioIntro: "In the heart of Kilimani, across from Yaya\u2026 Capricorn.",
     name: "Capricorn",
     developer: "Staroot",
     region: "nairobi",
@@ -156,6 +160,8 @@ const AFRAVIVA_PROPERTIES = [
   },
   {
     slug: "1870-west",
+    audio: "assets/audio/1870-west.mp3",  // placeholder: computer voice over a generated music bed
+    audioIntro: "In the heart of Nairobi\u2019s Westlands\u2026 1870 West.",
     name: "1870 West",
     developer: "HassConsult",
     region: "nairobi",
@@ -220,6 +226,8 @@ const AFRAVIVA_PROPERTIES = [
   },
   {
     slug: "gemini",
+    audio: "assets/audio/gemini.mp3",  // placeholder: computer voice over a generated music bed
+    audioIntro: "In Nairobi\u2019s Brookside\u2026 Gemini Residency.",
     name: "Gemini",
     developer: "Staroot",
     region: "nairobi",
@@ -321,6 +329,8 @@ const AFRAVIVA_PROPERTIES = [
   },
   {
     slug: "kai-apartments",
+    audio: "assets/audio/kai-apartments.mp3",  // placeholder: computer voice over a generated music bed
+    audioIntro: "Where Diani meets the Indian Ocean\u2026 Kai Residency.",
     name: "Kai Residency",
     developer: "HassConsult, AYCE Investments and Studio OMT Architects",
     region: "coast",
@@ -422,6 +432,8 @@ const AFRAVIVA_PROPERTIES = [
   },
   {
     slug: "enaki",
+    audio: "assets/audio/enaki.mp3",  // placeholder: computer voice over a generated music bed
+    audioIntro: "Beside Nairobi\u2019s Village Market\u2026 Enaki.",
     name: "Enaki",
     developer: "HassConsult",
     region: "nairobi",
@@ -503,6 +515,8 @@ const AFRAVIVA_PROPERTIES = [
   },
   {
     slug: "sensei",
+    audio: "assets/audio/sensei.mp3",  // placeholder: computer voice over a generated music bed
+    audioIntro: "On the shores of Nyali, Mombasa\u2026 Sensei.",
     name: "Sensei",
     developer: "HassConsult, AYCE Investments and Studio OMT Architects",
     region: "coast",

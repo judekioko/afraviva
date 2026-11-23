@@ -644,3 +644,14 @@ a.p-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .award-text p{ color: rgba(251,249,242,.82); line-height: 1.7; max-width: 60ch; }
 .award-source{ font-size: 13.5px; color: rgba(251,249,242,.6) !important; margin-top: 14px; }
 @media (min-width: 860px){ .award-grid{ grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
+
+/* Opt-in soundtrack: "Listen to <property>" on property pages, "Sound" on the homepage reel */
+.listen-btn{ display: inline-flex; align-items: center; gap: 8px; margin: 10px 0 4px 8px; padding: 7px 14px 7px 10px; border-radius: 999px; border: 1px solid var(--gold); background: transparent; color: var(--forest-dark); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .15s ease; }
+.listen-btn:hover{ background: rgba(185,138,70,.12); }
+.listen-btn.is-playing{ background: var(--forest-dark); border-color: var(--forest-dark); color: #F3D9A4; }
+.listen-icon{ width: 18px; height: 18px; border-radius: 50%; background: var(--gold); position: relative; flex: none; }
+.listen-icon::before{ content: ""; position: absolute; left: 7px; top: 5px; border-left: 6px solid #fff; border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+.is-playing .listen-icon::before{ left: 6px; top: 5px; width: 2px; height: 8px; border: 0; background: #fff; box-shadow: 4px 0 0 #fff; }
+.hero-sound-toggle{ position: absolute; right: 64px; bottom: 20px; z-index: 3; height: 36px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px 0 9px; border-radius: 999px; background: rgba(27,47,38,0.55); border: 1px solid rgba(251,249,242,0.4); color: var(--paper); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.hero-sound-toggle:hover, .hero-sound-toggle.is-playing{ background: rgba(27,47,38,0.85); }
+@media (max-width: 640px){ .listen-btn{ margin-left: 0; } }
