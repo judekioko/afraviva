@@ -1,0 +1,15 @@
+# Dependabot: the Homes site has no package dependencies of its own (plain
+# HTML/CSS/JS), so this keeps the GitHub Actions used by the FTP deploy
+# workflow (.github/workflows/deploy-homes.yml) up to date.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Africa/Nairobi"
+    groups:
+      actions:
+        patterns: ["*"]
